@@ -1,0 +1,461 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     14225,        451]
+NotebookOptionsPosition[     11440,        360]
+NotebookOutlinePosition[     13050,        406]
+CellTagsIndexPosition[     12965,        401]
+WindowTitle->Recruits - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/Recruits\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/Recruits"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+Recruits.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+           Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/Recruits", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Recruits", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["Recruits"], "InlineFormula"],
+     "\[LineSeparator]Recruits is an option in PopulationGrowth which is \
+active when RecruitmentFunction is set to ConstantRecruitment."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->162207197],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->55471825],
+
+Cell[TextData[{
+ "By default ",
+ ButtonBox["Recruits",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/Recruits"],
+ " is set to the generic ",
+ ButtonBox["PGR",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGR"]
+}], "ExampleText",
+ CellID->232362191],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "@", 
+  RowBox[{"PopulationGrowth", "[", 
+   RowBox[{
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "True"}], ",", 
+    RowBox[{"CatchAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"OldestAge", "\[Rule]", "Infinity"}]}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->58166358],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"PGM", " ", "PGtR"}]], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"PGF", "+", "PGM"}]], "-", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"PGkk", " ", "PGt0"}]]}], 
+     RowBox[{"PGF", "+", "PGkk", "+", "PGM"}]], "+", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"2", " ", "PGkk", " ", "PGt0"}]]}], 
+     RowBox[{"PGF", "+", 
+      RowBox[{"2", " ", "PGkk"}], "+", "PGM"}]], "-", 
+    FractionBox[
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"3", " ", "PGkk", " ", "PGt0"}]], 
+     RowBox[{"PGF", "+", 
+      RowBox[{"3", " ", "PGkk"}], "+", "PGM"}]]}], ")"}], " ", "PGR", " ", 
+  "PGW8"}]], "Output",
+ ImageSize->{540, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->295855985]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"PopulationGrowth", "[", 
+   RowBox[{
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "True"}], ",", 
+    RowBox[{"CatchAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"OldestAge", "\[Rule]", "Infinity"}]}], "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->28188353],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"R\"\>", " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\<\"M\"\>", " ", 
+      SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"3", " ", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\<\"k\"\>", " ", 
+           SubscriptBox["\<\"t\"\>", "0"]}]]}], 
+        RowBox[{"\<\"F\"\>", "+", "\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"2", " ", "\<\"k\"\>", " ", 
+          SubscriptBox["\<\"t\"\>", "0"]}]]}], 
+       RowBox[{"\<\"F\"\>", "+", 
+        RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+      FractionBox[
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"3", " ", "\<\"k\"\>", " ", 
+         SubscriptBox["\<\"t\"\>", "0"]}]], 
+       RowBox[{"\<\"F\"\>", "+", 
+        RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+      FractionBox["1", 
+       RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{354, 42},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->202939710]
+}, Open  ]],
+
+Cell[TextData[{
+ "The option Recruits is displaced when RecruitmentFunction is given a value \
+differnt from ",
+ Cell[BoxData[
+  ButtonBox["ConstantRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/ConstantRecruitment"]], "InlineFormula"]
+}], "ExampleText",
+ CellID->246177371],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PopulationGrowth", "[", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"Recruits", "\[Rule]", "1000"}]}], "]"}], "//", 
+  "Notation"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->32635486],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"1000", " ", 
+     SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"\[ImaginaryI]", " ", "\[Pi]", " ", "\<\"b\"\>"}]}], "+", 
+       RowBox[{"\<\"F\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], "+", 
+       RowBox[{"\<\"M\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\[Infinity]"]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"], "-", 
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\"c\""]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"]}], ")"}]}], "\<\"k\"\>"],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{399, 44},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->332029378]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PopulationGrowth", "[", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}], 
+    ",", 
+    RowBox[{"Recruits", "\[Rule]", "1000"}]}], "]"}], "//", 
+  "Notation"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->691349659],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"\<\"S\"\>", " ", 
+     SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+     SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"\[ImaginaryI]", " ", "\[Pi]", " ", "\<\"b\"\>"}]}], "+", 
+       RowBox[{"\<\"F\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], "+", 
+       RowBox[{"\<\"M\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\[Infinity]"]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"], "-", 
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\"c\""]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"]}], ")"}]}], 
+    RowBox[{"\<\"k\"\>", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"], "2"], "+", "\<\"S\"\>"}], 
+      ")"}]}]],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{406, 56},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->42825715]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Recruits - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 57, 29.8336715}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "Recruits Recruits is an option in PopulationGrowth which is active when \
+RecruitmentFunction is set to ConstantRecruitment.", "synonyms" -> {}, 
+    "title" -> "Recruits", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/Recruits"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3250, 96, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->162207197]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 12823, 394}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[680, 24, 179, 5, 70, "LinkTrail"],
+Cell[862, 31, 1856, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2743, 77, 51, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2797, 80, 416, 11, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3250, 96, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->162207197],
+Cell[CellGroupData[{
+Cell[3736, 113, 147, 5, 70, "ExampleSection",
+ CellID->55471825],
+Cell[3886, 120, 269, 10, 70, "ExampleText",
+ CellID->232362191],
+Cell[CellGroupData[{
+Cell[4180, 134, 363, 9, 70, "Input",
+ CellID->58166358],
+Cell[4546, 145, 946, 29, 60, "Output",
+ CellID->295855985]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5529, 179, 367, 9, 70, "Input",
+ CellID->28188353],
+Cell[5899, 190, 1399, 38, 77, "Output",
+ CellID->202939710]
+}, Open  ]],
+Cell[7313, 231, 299, 8, 70, "ExampleText",
+ CellID->246177371],
+Cell[CellGroupData[{
+Cell[7637, 243, 250, 8, 70, "Input",
+ CellID->32635486],
+Cell[7890, 253, 1443, 38, 79, "Output",
+ CellID->332029378]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9370, 296, 337, 10, 70, "Input",
+ CellID->691349659],
+Cell[9710, 308, 1664, 45, 91, "Output",
+ CellID->42825715]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[11413, 358, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

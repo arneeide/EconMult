@@ -1,0 +1,1401 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     48953,       1391]
+NotebookOptionsPosition[     43824,       1212]
+NotebookOutlinePosition[     45420,       1257]
+CellTagsIndexPosition[     45334,       1252]
+WindowTitle->Recruitment - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/Recruitment\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/Recruitment"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+Recruitment.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/Recruitment", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Recruitment", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"Recruitment", "[", "S", "]"}]], "InlineFormula"],
+     " \[LineSeparator]",
+     "gives the recruitment in number of individuals as a function of the \
+spawning biomass S."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->489194972],
+
+Cell[TextData[{
+ "RecruitmentFunction may have the value ",
+ Cell[BoxData[
+  ButtonBox["ConstantRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/ConstantRecruitment"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["BevertonHoltRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/BevertonHoltRecruitment"]]],
+ " or ",
+ Cell[BoxData[
+  ButtonBox["RickerRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/RickerRecruitment"]]],
+ "."
+}], "Notes",
+ CellID->1067943069]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->534617633],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->244460911],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->249152263],
+
+Cell[TextData[{
+ "Default value of the option ",
+ Cell[BoxData[
+  ButtonBox["RecruitmentFunction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/RecruitmentFunction"]], "InlineFormula"],
+ " is ",
+ Cell[BoxData[
+  ButtonBox["ConstantRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/ConstantRecruitment"]], "InlineFormula"]
+}], "ExampleText",
+ CellID->969238804],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Recruitment", "[", "S", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->390645237],
+
+Cell[BoxData["PGR"], "Output",
+ ImageSize->{25, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->486832517]
+}, Open  ]],
+
+Cell["\<\
+RecruitmentFunction may be given the value BevertonHoltRecruitment, employing \
+the Beverton and Holt recruitment function\
+\>", "ExampleText",
+ CellID->450119176],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"Recruitment", "[", 
+   RowBox[{"S", ",", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", 
+     ButtonBox["BevertonHoltRecruitment",
+      BaseStyle->"Link",
+      ButtonData->"paclet:EconMult/ref/BevertonHoltRecruitment"]}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->154968745],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"S", " ", 
+     SubscriptBox["\<\"R\"\>", "\<\"max\"\>"]}], 
+    RowBox[{
+     FractionBox[
+      SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"], "2"], "+", "S"}]],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{49, 46},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->24351170]
+}, Open  ]],
+
+Cell[TextData[{
+ "Additional optional values are ",
+ Cell[BoxData[
+  ButtonBox["MaximumRecruitmentBiomass",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/MaximumRecruitmentBiomass"]], 
+  "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["MaximumRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/MaximumRecruitment"]], "InlineFormula"]
+}], "ExampleText",
+ CellID->48808997],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Recruitment", "[", 
+    RowBox[{"S", ",", 
+     RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}], 
+     ",", 
+     RowBox[{"MaximumRecruitmentBiomass", "\[Rule]", "20"}], ",", 
+     RowBox[{"MaximumRecruitment", "\[Rule]", "10"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"S", ",", "0", ",", "70"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->500401537],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1: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
+/j/9vPQN
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 70}, {0., 8.749999977678572}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{184, 121},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->44178428]
+}, Open  ]],
+
+Cell["Ricker recruitment", "ExampleText",
+ CellID->168982189],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"Recruitment", "[", 
+   RowBox[{"S", ",", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", 
+     ButtonBox["RickerRecruitment",
+      BaseStyle->"Link",
+      ButtonData->"paclet:EconMult/ref/RickerRecruitment"]}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->72230650],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"S", " ", 
+     SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"1", "-", 
+       FractionBox["S", 
+        SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]]}]]}], 
+    SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{79, 51},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]//TraditionalForm=",
+ CellID->65710181]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Recruitment", "[", 
+  RowBox[{"S", ",", 
+   RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+   RowBox[{"RecruitmentExponent", "\[Rule]", "0"}]}], "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->276227309],
+
+Cell[BoxData["PGmR"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->456308371]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Recruitment", "[", 
+  RowBox[{"S", ",", 
+   RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+   RowBox[{"RecruitmentExponent", "\[Rule]", "1"}]}], "]"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->8905881],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"1", "-", 
+     FractionBox["S", "PGmRb"]}]], " ", "PGmR", " ", "S"}], 
+  "PGmRb"]], "Output",
+ ImageSize->{96, 43},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]=",
+ CellID->267259575]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Recruitment", "[", 
+  RowBox[{"S", ",", 
+   RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+   RowBox[{"RecruitmentExponent", "\[Rule]", "E"}]}], "]"}]], "Input",
+ CellLabel->"In[8]:=",
+ CellID->208629019],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"1", "-", 
+    RowBox[{
+     SuperscriptBox["PGmRb", 
+      RowBox[{"-", "\[ExponentialE]"}]], " ", 
+     SuperscriptBox["S", "\[ExponentialE]"]}]}]], " ", "PGmR", " ", 
+  SuperscriptBox["PGmRb", 
+   RowBox[{"-", "\[ExponentialE]"}]], " ", 
+  SuperscriptBox["S", "\[ExponentialE]"]}]], "Output",
+ ImageSize->{167, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[8]=",
+ CellID->348332017]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Recruitment", "[", 
+    RowBox[{"S", ",", 
+     RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+     RowBox[{"MaximumRecruitmentBiomass", "\[Rule]", "20"}], ",", 
+     RowBox[{"MaximumRecruitment", "\[Rule]", "10"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"S", ",", "0", ",", "70"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[9]:=",
+ CellID->333022467],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+eJNrSfyNFCumUl5stk4hhBBCSOj8D6a5NZc=
+    "], {{0, 122}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 122},
+  PlotRange->{{0, 180}, {0, 122}}]], "Output",
+ ImageSize->{184, 122},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[9]=",
+ CellID->262208834]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Recruitment", "[", 
+    RowBox[{"S", ",", 
+     RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+     RowBox[{"MaximumRecruitmentBiomass", "\[Rule]", "20"}], ",", 
+     RowBox[{"MaximumRecruitment", "\[Rule]", "10"}], ",", 
+     RowBox[{"RecruitmentExponent", "\[Rule]", "E"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"S", ",", "0", ",", "70"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[10]:=",
+ CellID->245488260],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+AQAAAEDT+R9PkyOQ
+    "], {{0, 122}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 122},
+  PlotRange->{{0, 180}, {0, 122}}]], "Output",
+ ImageSize->{184, 122},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[10]=",
+ CellID->213886384]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Recruitment", "[", 
+    RowBox[{"S", ",", 
+     RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+     RowBox[{"MaximumRecruitmentBiomass", "\[Rule]", "40"}], ",", 
+     RowBox[{"MaximumRecruitment", "\[Rule]", "10"}], ",", 
+     RowBox[{"RecruitmentExponent", "\[Rule]", "0.4"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"S", ",", "0", ",", "70"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellLabel->"In[11]:=",
+ CellID->83378080],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+bacQQgipC/8BVcMUyg==
+    "], {{0, 119}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 119},
+  PlotRange->{{0, 180}, {0, 119}}]], "Output",
+ ImageSize->{184, 119},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[11]=",
+ CellID->267428717]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Recruitment", "[", 
+  RowBox[{"1000.", ",", 
+   RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"MaximumRecruitmentBiomass", "\[Rule]", "754"}], ",", 
+   RowBox[{"MaximumRecruitment", "\[Rule]", "1000"}]}], "]"}]], "Input",
+ CellLabel->"In[12]:=",
+ CellID->101805865],
+
+Cell[BoxData["957.0524943766358`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[12]=",
+ CellID->13520849]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Scope",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1293636265],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "@", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"PGSB", "==", "\[IndentingNewLine]", 
+     RowBox[{"PopulationFractionBiomass", "[", 
+      RowBox[{
+       RowBox[{"FirstCatchAge", "\[Rule]", "PGtR"}], ",", 
+       RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", 
+       RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+       RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}], 
+       ",", 
+       RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}], ",", "PGSB"}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->22555817],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"PGSB", "\[Rule]", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"PGSB", "\[Rule]", 
+     RowBox[{"-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"3", " ", "PGkk"}], "+", "PGM"}], ")"}]}], " ", 
+           "PGtc"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"3", " ", "PGkk", " ", "PGt0"}], "+", 
+              RowBox[{"PGM", " ", "PGtR"}]}]], " ", "PGM", " ", 
+            RowBox[{"(", 
+             RowBox[{"PGkk", "+", "PGM"}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", "PGkk"}], "+", "PGM"}], ")"}], " ", "PGmR", 
+            " ", "PGW8"}], "-", 
+           RowBox[{"6", " ", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"2", " ", "PGkk", " ", "PGt0"}], "+", 
+              RowBox[{"PGkk", " ", "PGtc"}], "+", 
+              RowBox[{"PGM", " ", "PGtR"}]}]], " ", "PGM", " ", 
+            RowBox[{"(", 
+             RowBox[{"PGkk", "+", "PGM"}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"3", " ", "PGkk"}], "+", "PGM"}], ")"}], " ", "PGmR", 
+            " ", "PGW8"}], "+", 
+           RowBox[{"6", " ", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"PGkk", " ", "PGt0"}], "+", 
+              RowBox[{"2", " ", "PGkk", " ", "PGtc"}], "+", 
+              RowBox[{"PGM", " ", "PGtR"}]}]], " ", "PGM", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", "PGkk"}], "+", "PGM"}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"3", " ", "PGkk"}], "+", "PGM"}], ")"}], " ", "PGmR", 
+            " ", "PGW8"}], "+", 
+           RowBox[{
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{"3", " ", "PGkk", " ", "PGtc"}]], " ", 
+            RowBox[{"(", 
+             RowBox[{"PGkk", "+", "PGM"}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", "PGkk"}], "+", "PGM"}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"3", " ", "PGkk"}], "+", "PGM"}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{"PGM", " ", "PGtc"}]], " ", "PGM", " ", "PGmRb"}], 
+              "-", 
+              RowBox[{"2", " ", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{"PGM", " ", "PGtR"}]], " ", "PGmR", " ", "PGW8"}]}], 
+             ")"}]}]}], ")"}]}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"2", " ", "PGM", " ", 
+         RowBox[{"(", 
+          RowBox[{"PGkk", "+", "PGM"}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "PGkk"}], "+", "PGM"}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"3", " ", "PGkk"}], "+", "PGM"}], ")"}]}], ")"}]}]}]}], 
+    "}"}]}], "}"}]], "Output",
+ ImageSize->{554, 126},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->809613067]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"CohortBiomass", "[", 
+   RowBox[{"PGtR", ",", 
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}], 
+    ",", 
+    RowBox[{
+     RowBox[{"SpawningBiomass", "\[Rule]", "PGSB"}], "/.", 
+     RowBox[{"%", "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->372595533],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "0"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}], ")"}]}]]}], ")"}], 
+        "3"], " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\<\"M\"\>"}], " ", 
+         SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"3", " ", "\<\"k\"\>", " ", 
+            SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\<\"M\"\>", " ", 
+             SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"], " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"\<\"M\"\>", " ", 
+               SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}]]}], "-", 
+            RowBox[{"2", " ", 
+             SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+             SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"\<\"M\"\>", " ", 
+               SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]]}]}], ")"}]}], "-", 
+         RowBox[{"6", " ", "\<\"M\"\>", " ", 
+          RowBox[{"(", 
+           RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+          SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], "+", 
+            RowBox[{"2", " ", "\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "0"]}], "+", 
+            RowBox[{"\<\"M\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]}]]}], "+", 
+         RowBox[{"6", " ", "\<\"M\"\>", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+          SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"2", " ", "\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], "+", 
+            RowBox[{"\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "0"]}], "+", 
+            RowBox[{"\<\"M\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]}]]}], "+", 
+         RowBox[{"2", " ", "\<\"M\"\>", " ", 
+          RowBox[{"(", 
+           RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+          SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"3", " ", "\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "0"]}], "+", 
+            RowBox[{"\<\"M\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]}]]}]}], ")"}]}], ")"}], 
+     "/", 
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "\<\"M\"\>", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], 
+             " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"\<\"k\"\>", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SubscriptBox["\<\"t\"\>", "\<\"c\"\>"], "+", 
+                 RowBox[{"2", " ", 
+                  SubscriptBox["\<\"t\"\>", "0"]}]}], ")"}]}]]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], 
+             " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], 
+                " ", 
+                SuperscriptBox["\[ExponentialE]", 
+                 RowBox[{"3", " ", "\<\"k\"\>", " ", 
+                  SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}]]}], "-", 
+               RowBox[{"\<\"M\"\>", " ", 
+                SuperscriptBox["\[ExponentialE]", 
+                 RowBox[{"3", " ", "\<\"k\"\>", " ", 
+                  SubscriptBox["\<\"t\"\>", "0"]}]]}]}], ")"}]}]}], ")"}]}], 
+         "-", 
+         RowBox[{"3", " ", "\<\"M\"\>", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", 
+               SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], "+", 
+              SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}]}], ")"}]}], 
+      ")"}]}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{556, 106},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->23289837]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Neat Examples",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740],
+
+Cell["A cohort model with a Ricker recruitment:", "ExampleText",
+ CellID->273350384],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"spawningstock", "=", 
+  RowBox[{"SimplifyNotation", "@", 
+   RowBox[{"PopulationFractionBiomass", "[", 
+    RowBox[{
+     RowBox[{"FirstCatchAge", "\[Rule]", "PGtR"}], ",", 
+     RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", 
+     RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+     RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->48700495],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"R\"\>", " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"3", " ", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\<\"k\"\>", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["\<\"t\"\>", "0"], "-", 
+             SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+        RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"2", " ", "\<\"k\"\>", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["\<\"t\"\>", "0"], "-", 
+            SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+       RowBox[{
+        RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+      FractionBox[
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"3", " ", "\<\"k\"\>", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["\<\"t\"\>", "0"], "-", 
+           SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+       RowBox[{
+        RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+      FractionBox["1", "\<\"M\"\>"]}], ")"}], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\<\"M\"\>", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+        SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{334, 42},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]//TraditionalForm=",
+ CellID->122173852]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"CohortBiomass", "[", 
+   RowBox[{"PGtR", ",", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+    RowBox[{"SpawningBiomass", "\[Rule]", "spawningstock"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->81503392],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    FractionBox["1", 
+     SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]], 
+    RowBox[{
+     SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+     SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"\<\"k\"\>", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["\<\"t\"\>", "0"], "-", 
+            SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}], ")"}]}]]}], 
+       ")"}], "\<\"b\"\>"], " ", 
+     RowBox[{"(", 
+      TagBox[
+       FormBox[
+        TagBox[
+         RowBox[{"\<\"R\"\>", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"M\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{"3", " ", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{"\<\"k\"\>", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["\<\"t\"\>", "0"], "-", 
+                   SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+              RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+            FractionBox[
+             RowBox[{"3", " ", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{"2", " ", "\<\"k\"\>", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["\<\"t\"\>", "0"], "-", 
+                  SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+             RowBox[{
+              RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+            FractionBox[
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"3", " ", "\<\"k\"\>", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SubscriptBox["\<\"t\"\>", "0"], "-", 
+                 SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+             RowBox[{
+              RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+            FractionBox["1", "\<\"M\"\>"]}], ")"}], " ", 
+          SubscriptBox["\<\"W\"\>", "\[Infinity]"]}],
+         Function[BoxForm`e$, 
+          MatrixForm[BoxForm`e$]]],
+        TraditionalForm],
+       TraditionalForm,
+       Editable->True], ")"}], " ", 
+     RowBox[{"exp", "(", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        TagBox[
+         FormBox[
+          TagBox[
+           RowBox[{"\<\"R\"\>", " ", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{"\<\"M\"\>", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+                SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", 
+               FractionBox[
+                RowBox[{"3", " ", 
+                 SuperscriptBox["\[ExponentialE]", 
+                  RowBox[{"\<\"k\"\>", " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["\<\"t\"\>", "0"], "-", 
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+                RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+              FractionBox[
+               RowBox[{"3", " ", 
+                SuperscriptBox["\[ExponentialE]", 
+                 RowBox[{"2", " ", "\<\"k\"\>", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SubscriptBox["\<\"t\"\>", "0"], "-", 
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+               RowBox[{
+                RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+              FractionBox[
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{"3", " ", "\<\"k\"\>", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["\<\"t\"\>", "0"], "-", 
+                   SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+               RowBox[{
+                RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+              FractionBox["1", "\<\"M\"\>"]}], ")"}], " ", 
+            SubscriptBox["\<\"W\"\>", "\[Infinity]"]}],
+           Function[BoxForm`e$, 
+            MatrixForm[BoxForm`e$]]],
+          TraditionalForm],
+         TraditionalForm,
+         Editable->True], 
+        SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]]}], ")"}]}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{498, 118},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->14951040]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Recruitment - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 57, 26.9755080}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "Recruitment[S] gives the recruitment in number of individuals as a \
+function of the spawning biomass S.", "synonyms" -> {}, "title" -> 
+    "Recruitment", "type" -> "Symbol", "uri" -> "EconMult/ref/Recruitment"}, 
+  "LinkTrails" -> "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4443, 140, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->534617633]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 45191, 1245}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[604, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[683, 24, 179, 5, 70, "LinkTrail"],
+Cell[865, 31, 1870, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2760, 77, 54, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2817, 80, 435, 13, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3289, 98, 580, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->489194972],
+Cell[3872, 117, 534, 18, 70, "Notes",
+ CellID->1067943069]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4443, 140, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->534617633],
+Cell[CellGroupData[{
+Cell[4929, 157, 148, 5, 70, "ExampleSection",
+ CellID->244460911],
+Cell[5080, 164, 155, 5, 70, "Input",
+ CellID->249152263],
+Cell[5238, 171, 395, 12, 70, "ExampleText",
+ CellID->969238804],
+Cell[CellGroupData[{
+Cell[5658, 187, 107, 3, 70, "Input",
+ CellID->390645237],
+Cell[5768, 192, 160, 5, 36, "Output",
+ CellID->486832517]
+}, Open  ]],
+Cell[5943, 200, 173, 4, 70, "ExampleText",
+ CellID->450119176],
+Cell[CellGroupData[{
+Cell[6141, 208, 343, 10, 70, "Input",
+ CellID->154968745],
+Cell[6487, 220, 449, 15, 81, "Output",
+ CellID->24351170]
+}, Open  ]],
+Cell[6951, 238, 411, 13, 70, "ExampleText",
+ CellID->48808997],
+Cell[CellGroupData[{
+Cell[7387, 255, 452, 12, 70, "Input",
+ CellID->500401537],
+Cell[7842, 269, 2742, 54, 142, "Output",
+ CellID->44178428]
+}, Open  ]],
+Cell[10599, 326, 61, 1, 70, "ExampleText",
+ CellID->168982189],
+Cell[CellGroupData[{
+Cell[10685, 331, 338, 10, 70, "Input",
+ CellID->72230650],
+Cell[11026, 343, 547, 17, 86, "Output",
+ CellID->65710181]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11610, 365, 252, 6, 70, "Input",
+ CellID->276227309],
+Cell[11865, 373, 161, 5, 36, "Output",
+ CellID->456308371]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12063, 383, 250, 6, 70, "Input",
+ CellID->8905881],
+Cell[12316, 391, 313, 11, 64, "Output",
+ CellID->267259575]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12666, 407, 252, 6, 70, "Input",
+ CellID->208629019],
+Cell[12921, 415, 498, 15, 40, "Output",
+ CellID->348332017]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13456, 435, 440, 11, 47, "Input",
+ CellID->333022467],
+Cell[13899, 448, 3273, 61, 143, "Output",
+ CellID->262208834]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17209, 514, 501, 12, 65, "Input",
+ CellID->245488260],
+Cell[17713, 528, 3193, 60, 143, "Output",
+ CellID->213886384]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20943, 593, 552, 13, 65, "Input",
+ CellID->83378080],
+Cell[21498, 608, 2709, 52, 140, "Output",
+ CellID->267428717]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24244, 665, 352, 8, 70, "Input",
+ CellID->101805865],
+Cell[24599, 675, 175, 5, 36, "Output",
+ CellID->13520849]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24823, 686, 221, 7, 70, "ExampleSection",
+ CellID->1293636265],
+Cell[CellGroupData[{
+Cell[25069, 697, 606, 15, 70, "Input",
+ CellID->22555817],
+Cell[25678, 714, 3430, 92, 147, "Output",
+ CellID->809613067]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29145, 811, 453, 12, 70, "Input",
+ CellID->372595533],
+Cell[29601, 825, 6351, 158, 141, "Output",
+ CellID->23289837]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[36001, 989, 228, 7, 70, "ExampleSection",
+ CellID->589267740],
+Cell[36232, 998, 84, 1, 70, "ExampleText",
+ CellID->273350384],
+Cell[CellGroupData[{
+Cell[36341, 1003, 426, 10, 70, "Input",
+ CellID->48700495],
+Cell[36770, 1015, 1749, 49, 77, "Output",
+ CellID->122173852]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38556, 1069, 309, 8, 70, "Input",
+ CellID->81503392],
+Cell[38868, 1079, 4890, 126, 153, "Output",
+ CellID->14951040]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[43797, 1210, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

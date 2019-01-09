@@ -1,0 +1,604 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     17868,        594]
+NotebookOptionsPosition[     14322,        474]
+NotebookOutlinePosition[     15928,        519]
+CellTagsIndexPosition[     15843,        514]
+WindowTitle->MaximumBiomassGrowth - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"AgeOfMaxGrowth\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/AgeOfMaxGrowth"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EconMult/ref/MaximumBiomassGrowth\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/ref/MaximumBiomassGrowth"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/ref/\
+MaximumBiomassGrowth.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/ref/MaximumBiomassGrowth", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["MaximumBiomassGrowth", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"MaximumBiomassGrowth", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives the maximum biomass of a cohort (see also \
+AgeOfMaxGrowth)."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->31404338],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->427258873],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->68210866],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"AgeOfMaxGrowth", "[", "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->208355924],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"log", "(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\<\"b\"\>", " ", "\<\"k\"\>"}], 
+        RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]], "+", "1"}], 
+      ")"}], "\<\"k\"\>"], "+", 
+    SubscriptBox["\<\"t\"\>", "0"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{96, 44},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->18123155]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"AgeOfMaxGrowth", "[", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"MortalityRate", "\[Rule]", "GrowthRate"}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->200089074],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"log", "(", 
+     RowBox[{"\<\"b\"\>", "+", "1"}], ")"}], "\<\"k\"\>"],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{56, 33},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->425675673]
+}, Open  ]],
+
+Cell["\<\
+MaximumBiomassGrowth is the maximum growth the population may have in the \
+movement towards the natural equilibrium and corresponds to the Maximum \
+Sustainable Yield in a suplus production equation, but is reduced by fishing \
+in a cohort model.\
+\>", "ExampleText",
+ CellID->292374398],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"MaximumBiomassGrowth", "[", "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->542966947],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"R\"\>", " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       FractionBox["1", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\<\"b\"\>", " ", "\<\"k\"\>"}], 
+          RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]], "+", "1"}]]}], 
+      ")"}], "\<\"b\"\>"], " ", 
+    RowBox[{"exp", "(", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}], ")"}]}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"log", "(", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"\<\"b\"\>", " ", "\<\"k\"\>"}], 
+            RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]], "+", "1"}], 
+          ")"}], "\<\"k\"\>"], "-", 
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "+", 
+        SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{327, 55},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->666243002]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"MaximumBiomassGrowth", "[", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"RecruitmentAge", "\[Rule]", "0"}]}], "]"}]}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->80098131],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"R\"\>", " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{"\<\"b\"\>", " ", "\<\"k\"\>"}], 
+       RowBox[{
+        RowBox[{"\<\"b\"\>", " ", "\<\"k\"\>"}], "+", "\<\"F\"\>", 
+        "+", "\<\"M\"\>"}]], ")"}], "\<\"b\"\>"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\<\"b\"\>", " ", "\<\"k\"\>"}], 
+        RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]], "+", "1"}], ")"}], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}], "\<\"k\"\>"]}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{215, 41},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]//TraditionalForm=",
+ CellID->135054613]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"MaximumBiomassGrowth", "[", 
+   RowBox[{
+    RowBox[{"MortalityRate", "\[Rule]", "GrowthRate"}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->236198412],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    SuperscriptBox["\<\"b\"\>", "\<\"b\"\>"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"\<\"b\"\>", "+", "1"}], ")"}], 
+     RowBox[{
+      RowBox[{"-", "\<\"b\"\>"}], "-", "1"}]], " ", "\<\"R\"\>", " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\<\"k\"\>", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+        SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{155, 17},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]//TraditionalForm=",
+ CellID->144956236]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"MaximumBiomassGrowth", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"MortalityRate", "\[Rule]", "GrowthRate"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Fishing", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->629008819],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    SuperscriptBox["\<\"b\"\>", "\<\"b\"\>"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"\<\"b\"\>", "+", "1"}], ")"}], 
+     RowBox[{
+      RowBox[{"-", "\<\"b\"\>"}], "-", "1"}]], " ", "\<\"R\"\>", " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{107, 17},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]//TraditionalForm=",
+ CellID->10212592]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"MaximumBiomassGrowth", "[", 
+   RowBox[{
+    RowBox[{"MortalityRate", "\[Rule]", 
+     RowBox[{"GrowthRate", "*", "\[Alpha]"}]}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[8]:=",
+ CellID->27857917],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"R\"\>", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["\<\"b\"\>", 
+       RowBox[{"\<\"b\"\>", "+", "\[Alpha]"}]], ")"}], "\<\"b\"\>"], " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"log", "(", 
+         FractionBox[
+          RowBox[{"\<\"b\"\>", "+", "\[Alpha]"}], "\[Alpha]"], ")"}], "+", 
+        RowBox[{"\<\"k\"\>", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["\<\"t\"\>", "0"], "-", 
+           SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}], ")"}]}]}], ")"}]}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{194, 36},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[8]//TraditionalForm=",
+ CellID->844910768]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"MaximumBiomassGrowth", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"MortalityRate", "\[Rule]", 
+     RowBox[{"GrowthRate", "*", "\[Alpha]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"UseWeight", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[9]:=",
+ CellID->369577309],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"d\"\>", " ", "\<\"R\"\>", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{"\<\"b\"\>", "+", "\[Alpha]"}], "\[Alpha]"], ")"}], 
+     RowBox[{"-", "\[Alpha]"}]], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{"\<\"b\"\>", " ", 
+        SubscriptBox["\<\"L\"\>", "\[Infinity]"]}], 
+       RowBox[{"\<\"b\"\>", "+", "\[Alpha]"}]], ")"}], "\<\"b\"\>"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{125, 34},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[9]//TraditionalForm=",
+ CellID->212471900]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["AgeOfMaxGrowth",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/AgeOfMaxGrowth"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MaximumBiomassGrowth - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 54, 11.5263290}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "MaximumBiomassGrowth[] gives the maximum biomass of a cohort (see also \
+AgeOfMaxGrowth).", "synonyms" -> {}, "title" -> "MaximumBiomassGrowth", 
+    "type" -> "Symbol", "uri" -> "EconMult/ref/MaximumBiomassGrowth"}, 
+  "LinkTrails" -> "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3760, 108, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->31404338]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 15701, 507}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[613, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[692, 24, 179, 5, 70, "LinkTrail"],
+Cell[874, 31, 2351, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3250, 88, 63, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3316, 91, 407, 12, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3760, 108, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->31404338],
+Cell[CellGroupData[{
+Cell[4245, 125, 148, 5, 70, "ExampleSection",
+ CellID->427258873],
+Cell[4396, 132, 154, 5, 70, "Input",
+ CellID->68210866],
+Cell[CellGroupData[{
+Cell[4575, 141, 135, 4, 70, "Input",
+ CellID->208355924],
+Cell[4713, 147, 537, 18, 79, "Output",
+ CellID->18123155]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5287, 170, 307, 8, 70, "Input",
+ CellID->200089074],
+Cell[5597, 180, 364, 12, 68, "Output",
+ CellID->425675673]
+}, Open  ]],
+Cell[5976, 195, 298, 6, 70, "ExampleText",
+ CellID->292374398],
+Cell[CellGroupData[{
+Cell[6299, 205, 141, 4, 70, "Input",
+ CellID->542966947],
+Cell[6443, 211, 1174, 36, 90, "Output",
+ CellID->666243002]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7654, 252, 261, 7, 70, "Input",
+ CellID->80098131],
+Cell[7918, 261, 893, 27, 76, "Output",
+ CellID->135054613]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8848, 293, 271, 7, 70, "Input",
+ CellID->236198412],
+Cell[9122, 302, 767, 23, 52, "Output",
+ CellID->144956236]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9926, 330, 499, 11, 70, "Input",
+ CellID->629008819],
+Cell[10428, 343, 547, 17, 52, "Output",
+ CellID->10212592]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11012, 365, 303, 8, 70, "Input",
+ CellID->27857917],
+Cell[11318, 375, 950, 28, 71, "Output",
+ CellID->844910768]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12305, 408, 576, 11, 70, "Input",
+ CellID->369577309],
+Cell[12884, 421, 694, 21, 69, "Output",
+ CellID->212471900]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13639, 449, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[14059, 463, 221, 6, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[14295, 472, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

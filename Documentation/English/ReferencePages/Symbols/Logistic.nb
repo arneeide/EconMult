@@ -1,0 +1,411 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     14438,        401]
+NotebookOptionsPosition[     11765,        316]
+NotebookOutlinePosition[     13418,        362]
+CellTagsIndexPosition[     13333,        357]
+WindowTitle->Logistic - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/Logistic\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/Logistic"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+Logistic.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+           Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/Logistic", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Logistic", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["Logistic"], "InlineFormula"],
+     "\[LineSeparator]is an option value for Maturation and CatchSelection \
+which are options in PopulationGrowth and for CatchSelection which is an \
+option in CatchSelectionFunction."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->281948920],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->87200244],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->249152263],
+
+Cell["\<\
+This optional value could only be used for numerical calculations.\
+\>", "ExampleText",
+ CellID->64942642],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PopulationGrowth", "[", 
+  RowBox[{
+   RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+   RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+   RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", 
+   RowBox[{"FirstCatchAge", "\[Rule]", "0"}], ",", 
+   RowBox[{"CatchAge", "\[Rule]", "3"}], ",", 
+   RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", 
+   RowBox[{"Recruits", "\[Rule]", "1"}], ",", 
+   RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", 
+   RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", 
+   RowBox[{"GrowthRate", "\[Rule]", ".3"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->420325547],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "0.5488116360940264`"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", 
+      RowBox[{"0.2`", "\[InvisibleSpace]", "+", "PGF"}]]}], "+", 
+    FractionBox["1.2197089792217974`", 
+     RowBox[{"0.5`", "\[InvisibleSpace]", "+", "PGF"}]], "-", 
+    FractionBox["0.4958966646647597`", 
+     RowBox[{"0.8`", "\[InvisibleSpace]", "+", "PGF"}]], "+", 
+    FractionBox["0.06720551273974978`", 
+     RowBox[{"1.0999999999999999`", "\[InvisibleSpace]", "+", "PGF"}]]}], 
+   ")"}]}]], "Output",
+ ImageSize->{372, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->357349376]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PopulationGrowth", "[", 
+  RowBox[{
+   RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+   RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+   RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", 
+   RowBox[{"FirstCatchAge", "\[Rule]", "1"}], ",", 
+   RowBox[{"CatchAge", "\[Rule]", "3"}], ",", 
+   RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", 
+   RowBox[{"Recruits", "\[Rule]", "1"}], ",", 
+   RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", 
+   RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", 
+   RowBox[{"GrowthRate", "\[Rule]", ".3"}], ",", 
+   RowBox[{"CatchSelection", "\[Rule]", "Logistic"}], ",", 
+   RowBox[{"FishingMortalityRate", "\[Rule]", ".1"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->30171308],
+
+Cell[BoxData["0.9944561008674475`"], "Output",
+ ImageSize->{60, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->307648091]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"PopulationGrowth", "[", 
+       RowBox[{
+        RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+        RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+        RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", 
+        RowBox[{"FirstCatchAge", "\[Rule]", "1"}], ",", 
+        RowBox[{"CatchAge", "\[Rule]", "3"}], ",", 
+        RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", 
+        RowBox[{"Recruits", "\[Rule]", "1"}], ",", 
+        RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", 
+        RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", 
+        RowBox[{"GrowthRate", "\[Rule]", ".3"}], ",", 
+        RowBox[{"CatchSelection", "\[Rule]", "#"}], ",", 
+        RowBox[{"FishingMortalityRate", "\[Rule]", "F"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"F", ",", ".2", ",", "1"}], "}"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"#", "===", "Logistic"}], ",", "Red", ",", "Blue"}], 
+        "]"}]}]}], "]"}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{"Logistic", ",", "Sharp"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->301816801],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {}, 
+    {RGBColor[1, 0, 0], LineBox[CompressedData["
+1:eJwVzn881HcAx3Gda5wo+TW/HkZLMm5Zk0V4R1lR86sS8qOS6tFjIyQVCpcs
+MWn90g+jiFMz7vYgKUPzdXd+nd+/z/lxus6PT1MRslv74/V4/vsyORzuHUpT
+UFD44VP/y7JmP8/K4qP3YLOy3m0J9PPmZx7m8jFooOiR/qsEHE0382I2H6F1
+1W6KGRKMzMhu1FbwsaJgR/C7ZAmcSi3DJ3r5iJ2tGJVFSSBnlpg46Aswy2y6
+sd5Tgliz8kviOwJYiW5liRkSROnXeZrda0C13KNOK2kMotVT5CO/CUldtiaD
+4aPYdDRBo7+tBZHlf065XhpBB3sDr1oqhOJq6/cy7jDczPNVny61QoV1tc5u
+RAyb/cJr3yq0Q/S4LFPpazHE6YlGe3Q7YJJUnHDnrQi6mT3dPhadiLEXLP77
+ZBCUs6RNZNGFjCOlCTbXBvDNUky7inM3XvTRT2lE90PzaLV2pUsPyr9zDDGL
+7wPrbnGyx/Ze7DwKtaKsXpT0rllM8e1DzLmL9qWcHnhTuznb/fvRnFUVUivt
+BqfyY1h+xABkhFt1yKAbOfHefjLWICK20u22BXWBPh2YzGWJ4H/oC67R006Y
+HiNlxllDWG/BVmWu7ETwDgNthrsYxCnXIexMBy4PJbbu6RMj4UTlXu2hdiwE
+VuapHxmGjY1/WJ9nOx5xW25njA3j7qs4txXtbShVK8gQh49A1fSY7y2vNsw5
++hW8/WcEKXEGzwSiVlz0EXWeiRiFI7FxS41qxcnIdUrCxdFPP1c5ZfRW3Ap1
+9XsdN4YJi7ngNQ+EMAzcUNyhLMGZ1CLDzfZCSO2kehuvSaC3RRqaX9ECQmIf
+eWmMI/HnvKKzq1qwj922adv9cYwWeZuPBTVj1pY+Pmv0CsTB1UOjpgmiEuXf
+DbNfYd59fuyKZRNMLYWntdZLsYui0aSZjSg4H3mouVCKdO4bbqhSI1I6u939
+rV/jycu0esuYBjxQ1A0sLHuN9KG0v2rfC0DXtUg6biPDh2xfn9RYAeqslhUt
+VMswG2DkMr7IR40xZ8bdeQKOe3fWml3mw1B7nWN08wQYUmWdfav5qCI/5qj5
+TuJ8/LKXn+XwcDf3ly+P90zC2ifxg9yWh679UezrIVNYac5Ps2ipx27JRk+W
+ZAq8/Rzd9rB6MPzq1MaOTIM505gZqlkP01b9Zh0yjdvv7tv+xKUQZ7zrjxUn
+Cc5ZNTjUBlAIHjuRsCuS4HRxU7DLAQrOhaleV04RHAjilPH8KChbCd6qnCWw
+583ShD4UbsB1s0oSgdrNLVrDnhSKg3bUKF8nqGI6qKu5UBi+t619+VOCCN0P
+a9KYFP4+GJLn8ozgoSC4UduSQuFaVnTycwKvFm/2b19RCHtS+/nyGoKbnJIl
+rhmFhUqnALqAILfYdNWQCQWtfkhoAwT96o0NjjoU5rKDy5xFBBN28sIGLQp9
+hy+kJIkJdl/UqfDVpJAjqzKnSQjoDF5ElDoF5oJD2LJpgt4L2tsfq1BQrwqE
+0xuClzY7y20ZFN4lxqsnzhBYxakG8pQoPGO84CjMESzPNt46Tqdwv2mAtXWe
+YHL2QHy0IoWEzI97ExYJArvlk3QahZB9huuqlwgC6LSM6woUvtezn5PLCfJd
+fEPWyuvwHw31b5w=
+      "]]}}, {{}, {}, 
+    {RGBColor[0, 0, 1], LineBox[CompressedData["
+1:eJwVkXs0lAkAxSUtpqYVEbOSdkkOoTZtSm6JtZJIUTpJ5XmcLY/ZVCahIUlL
+VCukQ4nRY8q0R6IVH0MzwmA0M54jM5P3l6lYJGv/uOf33z2/c+/ak+FeQaoq
+KiruC/mfzM0lr7Kzedj62qN5giYHrXBaeb+Ah3aqkdhNTw6Ozh5zdgkPT+zZ
+ecUr5HivHL5FvOTBlxZ3OFBDjl2lluEjEh5mVD/SlV9kmN/wbO0OGh95OgEX
+jrfKwDB7cVmaw8eJMPe62BQZ6DSup9mdRthvfJqU9m0AvSvGyK+8JkS4nmKJ
+5e9hGxyv3dXWAqadp/6NyX4IS6zfVA8KQOujrp4w6sce8wfLyuda8c35wLIB
+Fym2HBJk/qzSDvPlN3u+rO6D9M8EowP6Qlg5r3IbfdQD/QyxyMeiA79VpLTE
+He1GvaO8rdfiHRL1rvjP2XVh49zZdoqjCMcpWYzZlZ3QCa7WrXQWQ3Os4pql
+ngTMXHaSh5MEI8HqYwctxXgm+XE2+XAnTkzGxMkcRPCq38txOtKFzGjdRPfw
+d+BUfj39ILIbqYyJMqs7HciP9fIdZvbARbzY+K1ECLVxv6TnzF5wvdVeLrcW
+wjSELDPO7sOqi4xEenw7/F1+0NXcJ8VWsVZwoaINKX0JrQc6pZiOirC2cW3D
+jF9loVZgP+hZr4S2L1pR9LzldrqsH+4x3+mYbmlFKbU4XRr+HnEPU7mhpQJM
+OfgWf5pY2LWyQb1uuwCJPr0d5yIHcJBp+1mU24KIqHXqgtkB9HC80mfLm5EV
+5Oo7dEEGyrVfqr3JJhj6WbOFCz/H3guSLFnThMFtgwabMuWgi7893nT0LUiS
+UbRfWwF9YS3nBrsR3iVttrvzFBhRfKrKnOFj0k5NMWn0AUutitZIfPnofabx
+xPDuBwRGm3yuIHgwtRREr1w/iJBh92PXTHkovhh1opk1iHOeHpODt98guUO0
+78jmIZyyWepU8N0b3Fus78cqG8LI9P6MRGYD1PQtLoVuGcbZpo1TQvUGcG0W
+PZypHkaHz9k1gsv1qDHmKPc5joDFX132r3Y9DHXXOZxpHgE9xuG+WQ4XVeTv
++dTDo9CmPk3/fj0XuQVpP4WKR/EyROl0pqYO7w7RS24GjOH6621UC5867JVv
+8mTKx0AzM7O7+qUWmr5cqixwHPGktf1Udi1MW2nNeuQ4LJ+kD0zb1eKCsdvT
+pREkONINmmEDBPxlYfFuUSSGgh5/GOsn4Mi6uj/1DxJyqtdcpJSAhg3/E+U8
+iZrN8qaYHgK34LqVconE7rRR1XQRAfYxlxqNmyQ62//i1DQS6L+zu31JOQmP
+4lKJx98E6o4HFDpXkFA0bkvu5BBgmTDPJL0ikbI9MSyolMDpx8SqJTULPgqL
+NgabwEzlrqNqfBL553NMHrEIrOyCXLWbRMf5Y2918ghM3fUvc+xd8GlqEBTk
+Eug8GZd8SUriebAjxSaHQP5wlbmqfKGfstPQPYvAhpkdpxeNk4CVVWVKBgGt
+Kj/s+kgi4KEy2OA6gc8JsVoJShJBs5EuJWkEKjT/4ahMkagyiC7ipRLIa+pm
+7pwmoXpKbnLkKoH4jK8H42dJqBXIRMNXCAR4G66rniNRPh/6mpFM4FcD+6n5
+eRJzHSFdyy4T+A+MNH7v
+      "]]}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0.2, 0.2},
+  PlotRange->{{0.2, 1}, {0.1718488202173322, 0.6748166248317161}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{184, 109},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->174554418]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Logistic - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 53, 49.4810681}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "Logistic is an option value for Maturation and CatchSelection which are \
+options in PopulationGrowth and for CatchSelection which is an option in \
+CatchSelectionFunction.", "synonyms" -> {}, "title" -> "Logistic", "type" -> 
+    "Symbol", "uri" -> "EconMult/ref/Logistic"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3298, 97, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->281948920]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13191, 350}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[680, 24, 179, 5, 70, "LinkTrail"],
+Cell[862, 31, 1856, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2743, 77, 51, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2797, 80, 464, 12, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3298, 97, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->281948920],
+Cell[CellGroupData[{
+Cell[3784, 114, 147, 5, 70, "ExampleSection",
+ CellID->87200244],
+Cell[3934, 121, 155, 5, 70, "Input",
+ CellID->249152263],
+Cell[4092, 128, 116, 3, 70, "ExampleText",
+ CellID->64942642],
+Cell[CellGroupData[{
+Cell[4233, 135, 628, 14, 70, "Input",
+ CellID->420325547],
+Cell[4864, 151, 680, 19, 53, "Output",
+ CellID->357349376]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5581, 175, 747, 16, 70, "Input",
+ CellID->30171308],
+Cell[6331, 193, 176, 5, 36, "Output",
+ CellID->307648091]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6544, 203, 1245, 30, 70, "Input",
+ CellID->301816801],
+Cell[7792, 235, 3907, 74, 130, "Output",
+ CellID->174554418]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[11738, 314, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

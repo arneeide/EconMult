@@ -1,0 +1,417 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15237,        407]
+NotebookOptionsPosition[     12802,        327]
+NotebookOutlinePosition[     14332,        372]
+CellTagsIndexPosition[     14247,        367]
+WindowTitle->MaturationAge - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/MaturationAge\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/MaturationAge"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+MaturationAge.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/MaturationAge", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["MaturationAge", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"MaturationAge", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]MaturationAge"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->365501078],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->26224255],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MaturationFunction", "[", 
+    RowBox[{"t", ",", 
+     RowBox[{"MaturationAge", "\[Rule]", "5"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->242677574],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxFz30s1AEYB/DTeeuoocj7/Q7zct6tpBehWimSymVjiUtez3kZm9DLxGRN
+qd3kJR02qeUlDWXO4RzXebnGzcuiUkjelnDkrau2ep7v9uy7z3/Pl8aMPX91
+G4lECvpzf7v4BlPZMfTuEdK/CKWEtz8R6fbf8k7+bYK4Bi5uzaEqEdlglmtS
+zCq1ACzdiOAsUJ+DVUa+WMxTG8GlXdz4WaoYXF2TPcKyew8Od+srmEsYB7Mn
+rcbrqqfBFFqGxSeXBfA9jW56afASmDni10LuWQHHd2QwYy3WwbVx6hd0T23h
+P6nRMw7+JPf/TudunlueUwCTpGPuvBQy2DwxLNmPrgSekD26qNasDD49GXX9
+Ybwq2Gci19rYmAKeaWfeelulBrbTHDQ6dnkHmOImCxld2gk+OR+wasLQAA8L
+QhUCbDTB9XeEQYQMHaaUNCaRaIH1qeKhjT60xMXoneUA2pnV0Zw+glaWahc5
+f0OXlzQwnijswr2HfnbF7EXnM7wFhfvR3rEljaKD6Loyz2c0D3TG9oLMgTNo
+s6ED7q7h6CsJqfXqhWhnp4/1VsVoyqJ7w4kS9Mt45de3nqI34x68WX6Fzout
+aBrtRkfaU3hrEvTh7yyeTj96nO3U7DuMdmA384UTaLId0fJ5Cj04n97yawad
+FuPZ6vIDfdb2RStjGW0yv6MtYRW9UhnXdn8dLWZJ2yq30I9tnAVi0u5/XnCL
+m8sXfCWjj1VuCMgqaB1WUDtBQfNmTYUBGmhm9LSQo4OuiUrsVDVFb0bKRWn2
+6LwI7e5QT7R9uLXEOwQt572YC+5Fv9OyUUs6oA1uqk4vsiHrgFMV6L49H9CU
+0RRPdt0e8ORTGoebpgvmWOopNjL0wLmFYaIQQh8cwLkkUZ9C/zxevsblG4DH
+J48mC7IMwWWujga9IUbgqswkzXBbY3AW44oXWYbeN1r6PKuXCs63Kqrq9SLA
+N1tz8r0a0WcMGOVdZjSwB1sUqJmN5hoyzXpkaLP2ijyfQBPcZyug9/PRYUuK
+fWK6KZhZu0hk30fn9qvnCEVo/pL5mlyO/g0yKXZo
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 10}, {0., 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{184, 120},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->948451419]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MaturationFunction", "[", 
+    RowBox[{"t", ",", 
+     RowBox[{"Maturation", "\[Rule]", "Logistic"}], ",", 
+     RowBox[{"MaturationAge", "\[Rule]", "5"}], ",", 
+     RowBox[{"MaturationStartAge", "\[Rule]", "3"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->11982719],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+QgjJAP8Dh8oJfw==
+    "], {{0, 120}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 120},
+  PlotRange->{{0, 180}, {0, 120}}]], "Output",
+ ImageSize->{184, 120},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->368608666]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MaturationFunction", "[", 
+    RowBox[{"t", ",", "\[IndentingNewLine]", 
+     RowBox[{"Maturation", "\[Rule]", "Logistic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"MaturationAge", "\[Rule]", "5"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MaturationStartAge", "\[Rule]", "3"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"MaturationStartPercentage", "\[Rule]", ".01"}]}], 
+    "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "10"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->472672593],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 117}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 117},
+  PlotRange->{{0, 180}, {0, 117}}]], "Output",
+ ImageSize->{184, 117},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->18782432]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"MaturationAge - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 53, 52.7432546}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "MaturationAge[] MaturationAge", "synonyms" -> {}, "title" -> 
+    "MaturationAge", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/MaturationAge"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3213, 96, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->365501078]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 14105, 360}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[606, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[685, 24, 179, 5, 70, "LinkTrail"],
+Cell[867, 31, 1878, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2770, 77, 56, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2829, 80, 347, 11, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3213, 96, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->365501078],
+Cell[CellGroupData[{
+Cell[3699, 113, 147, 5, 70, "ExampleSection",
+ CellID->26224255],
+Cell[CellGroupData[{
+Cell[3871, 122, 374, 11, 70, "Input",
+ CellID->242677574],
+Cell[4248, 135, 1540, 34, 141, "Output",
+ CellID->948451419]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5825, 174, 490, 13, 101, "Input",
+ CellID->11982719],
+Cell[6318, 189, 2948, 56, 141, "Output",
+ CellID->368608666]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9303, 250, 760, 17, 191, "Input",
+ CellID->472672593],
+Cell[10066, 269, 2670, 51, 138, "Output",
+ CellID->18782432]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[12775, 325, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
