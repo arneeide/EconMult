@@ -1,0 +1,218 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6003,        208]
+NotebookOptionsPosition[      4097,        144]
+NotebookOutlinePosition[      5075,        172]
+CellTagsIndexPosition[      5032,        169]
+WindowTitle->EconMult - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["EconMult", "GuideTitle",
+ CellID->942062912],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->1],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{"EconMult", "[", "]"}]], "InlineGuideFunction"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " runs the EconMult model through one period (see ",
+ Cell[TextData[ButtonBox["EMyearPeriod",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/EMyearPeriod"]], "InlineFunctionSans"],
+ "). EconMult is design to perform numerical computations.\""
+}], "GuideText",
+ CellID->203374175]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["TUTORIALS", "GuideTutorialsSection",
+ CellID->415694126],
+
+Cell["EconMult setup", "GuideTutorial",
+ CellID->806871991],
+
+Cell["Load the EconMult package by", "TR",
+ CellID->13769354],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`EconMult`\>\"", "]"}], ";"}]], "Code",
+ CellLabel->"In[1]:=",
+ CellID->105688127],
+
+Cell[TextData[{
+ "EconMult includes structural variables which define the model resolutions. \
+Structural variables are set by the EconMult command ",
+ Cell[TextData[ButtonBox["EMsetup",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/EMsetup"]], "InlineFunctionSans"],
+ "."
+}], "TR",
+ CellID->8104208],
+
+Cell[CellGroupData[{
+
+Cell["EMsetup[]", "Code",
+ CellLabel->"In[1]:=",
+ CellID->99816226],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No biomass vector was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->677873596],
+
+Cell[BoxData["\<\"No fleet vector was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->14826000],
+
+Cell[BoxData["\<\"No period interval was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->269552782],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"EconMult structure:\\n\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" targeted species (pEMtargetedSpecies)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" biounit (EMrelatedBioUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" fleet group (pEMfleetUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" simulation period per year (EMinterval)\"\>"}],
+  SequenceForm[
+  "EconMult structure:\n", 1, " targeted species (pEMtargetedSpecies)\n", 1, 
+   " biounit (EMrelatedBioUnits)\n", 1, " fleet group (pEMfleetUnits)\n", 1, 
+   " simulation period per year (EMinterval)"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->739403263]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "The structural variables are ",
+ Cell[TextData[ButtonBox["EMrelatedBioUnits",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/EMrelatedBioUnits"]], "InlineFunctionSans"],
+ ", ",
+ Cell[TextData[ButtonBox["pEMfleetUnits",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/pEMfleetUnits"]], "InlineFunctionSans"],
+ " and ",
+ Cell[TextData[ButtonBox["EMinterval",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/EMinterval"]], "InlineFunctionSans"],
+ "."
+}], "TR",
+ CellID->60250413]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"EconMult - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 47, 3.6128537}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Econ Mult Guide", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    " ", "synonyms" -> {}, "title" -> "EconMult", "type" -> "Guide", "uri" -> 
+    "EconMult/guide/EconMult"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 75, 1, 70, "GuideColorBar"],
+Cell[679, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[913, 34, 50, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[966, 37, 56, 1, 70, "GuideAbstract",
+ CellID->1],
+Cell[1025, 40, 426, 11, 70, "GuideText",
+ CellID->203374175]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1488, 56, 62, 1, 70, "GuideTutorialsSection",
+ CellID->415694126],
+Cell[1553, 59, 59, 1, 70, "GuideTutorial",
+ CellID->806871991],
+Cell[1615, 62, 61, 1, 70, "TR",
+ CellID->13769354],
+Cell[1679, 65, 143, 4, 70, "Code",
+ CellID->105688127],
+Cell[1825, 71, 310, 8, 70, "TR",
+ CellID->8104208],
+Cell[CellGroupData[{
+Cell[2160, 83, 67, 2, 70, "Code",
+ CellID->99816226],
+Cell[CellGroupData[{
+Cell[2252, 89, 150, 3, 70, "Print",
+ CellID->677873596],
+Cell[2405, 94, 147, 3, 70, "Print",
+ CellID->14826000],
+Cell[2555, 99, 151, 3, 70, "Print",
+ CellID->269552782],
+Cell[2709, 104, 800, 16, 70, "Print",
+ CellID->739403263]
+}, Open  ]]
+}, Open  ]],
+Cell[3536, 124, 519, 15, 70, "TR",
+ CellID->60250413]
+}, Open  ]],
+Cell[4070, 142, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

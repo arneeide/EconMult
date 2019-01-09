@@ -1,0 +1,112 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2928,        102]
+NotebookOptionsPosition[      1534,         60]
+NotebookOutlinePosition[      2536,         88]
+CellTagsIndexPosition[      2493,         85]
+WindowTitle->PopulationGrowth - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["PopulationGrowth", "GuideTitle",
+ CellID->942062912],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->1],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->311258892],
+
+Cell[CellGroupData[{
+
+Cell["Individual Growth", "GuideFunctionsSubsection",
+ CellID->279303891],
+
+Cell[BoxData[
+ RowBox[{Cell[BoxData[
+   ButtonBox["AgeOfMaxGrowth",
+    BaseStyle->"Link"]], "InlineFormula"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[BoxData[
+   ButtonBox["XXXX",
+    BaseStyle->"Link"]], "InlineFormula"]}]], "InlineGuideFunctionListing",
+ CellID->58033752]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PopulationGrowth - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 47, 6.7420327}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Econ Mult Guide", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    " ", "synonyms" -> {}, "title" -> "PopulationGrowth", "type" -> "Guide", 
+    "uri" -> "EconMult/guide/PopulationGrowth"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[609, 21, 75, 1, 70, "GuideColorBar"],
+Cell[687, 24, 179, 5, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[891, 33, 58, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[952, 36, 56, 1, 70, "GuideAbstract",
+ CellID->1],
+Cell[1011, 39, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->311258892],
+Cell[CellGroupData[{
+Cell[1094, 44, 73, 1, 70, "GuideFunctionsSubsection",
+ CellID->279303891],
+Cell[1170, 47, 310, 7, 70, "InlineGuideFunctionListing",
+ CellID->58033752]
+}, Open  ]]
+}, Open  ]],
+Cell[1507, 58, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

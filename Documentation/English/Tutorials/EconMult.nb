@@ -1,0 +1,952 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     27374,        942]
+NotebookOptionsPosition[     21780,        751]
+NotebookOutlinePosition[     23592,        799]
+CellTagsIndexPosition[     23549,        796]
+WindowTitle->EconMult - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "TutorialColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECON MULT TUTORIAL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/tutorial/EconMult\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/tutorial/EconMult"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/tutorial/\
+EconMult.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+           Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/tutorial/EconMult", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["EconMult", "Title",
+ CellID->509267359],
+
+Cell["\<\
+EconMult is a fleet model designed to be a part of a bioeconomic simulation \
+model. First of all EconMult is meant to perform numerical calculations, but \
+it may also be capable of doing simple analytical operations.\
+\>", "Text",
+ CellID->1534169418],
+
+Cell["XXXX.", "Caption",
+ CellID->1891092685],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`EconMult`\>\"", "]"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->2058623809],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{"SurplusProduction", ",", 
+    RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+    RowBox[{"IntrinsicGrowthRate", "\[Rule]", ".5"}], ",", 
+    RowBox[{"BiomassMaximum", "\[Rule]", "1000"}]}], "]"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->74831514],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BioUnitAtTime", "[", 
+   RowBox[{"1", ",", "t_"}], "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"BioUnitAtTime", "[", 
+     RowBox[{"1", ",", "t"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"BioUnitAtTime", "[", 
+      RowBox[{"1", ",", 
+       RowBox[{"t", "-", "1"}]}], "]"}], "+", 
+     RowBox[{"SurplusProduction", "[", 
+      RowBox[{"CurrentBiomass", "\[Rule]", 
+       RowBox[{"BioUnitAtTime", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{"t", "-", "1"}]}], "]"}]}], "]"}], "-", 
+     RowBox[{"Part", "[", 
+      RowBox[{
+       RowBox[{"Flatten", "@", 
+        RowBox[{"EMfleetCatch", "[", 
+         RowBox[{"EMe", "\[RuleDelayed]", "EMtempDaysOfFishing"}], "]"}]}], 
+       ",", "1"}], "]"}]}]}], ")"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->60208738],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"BioUnitAtTime", "[", 
+    RowBox[{"1", ",", "1"}], "]"}], "=", "950"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->3381494],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMsetup", "[", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->378250152],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No biomass vector was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->548357141],
+
+Cell[BoxData["\<\"No fleet vector was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->511771658],
+
+Cell[BoxData["\<\"No period interval was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->97635340],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"EconMult structure:\\n\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" targeted species (pEMtargetedSpecies)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" biounit (EMrelatedBioUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" fleet group (pEMfleetUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" simulation period per year (EMinterval)\"\>"}],
+  SequenceForm[
+  "EconMult structure:\n", 1, " targeted species (pEMtargetedSpecies)\n", 1, 
+   " biounit (EMrelatedBioUnits)\n", 1, " fleet group (pEMfleetUnits)\n", 1, 
+   " simulation period per year (EMinterval)"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->612532138]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"bEMuseCM", "=", "True"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EMelOfEffortIsOneQ", "=", "True"}], ";"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->434219081],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"pEMelOfBiomass", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"{", "1", "}"}], "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMcatchability", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"{", ".000002", "}"}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EMfleet", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", "400", "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EMdaysOfFishing", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", "300", "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EMunitPrice", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"{", "9", "}"}], "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMfixedCost", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", "0", "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMvariableEffortCost", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", ".01", "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMvariableCatchCost", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", "0", "}"}], "}"}]}], ";"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->573315782],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"EconMult", "[", "]"}], ",", 
+   RowBox[{"{", "41", "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->27013149],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"Flatten", "@", "hEMyearTargetBiomass"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "All"}], "}"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->409111507],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxTTMoPSmViYGDQBGIQDQEf7MHUhl4HqIADKp8DQvu1Q/kCDpZbTpRNW9MC
+5Ys4eOTfCv9o2gzlSzhcOf+Y86dPE5Qv42CxR9/PcXMjlK/goCB/yl3WC8ZX
+cmBf8FjqiForlK/i0DW35L58Hcw8NYcZKw1ELKth5mk47LNP2O9/CaZfy+F9
+UbrFjHgYX8fhSlF+7zJ+GF/PwXvrhIfG72HuNXBY3u3e3x4LM9/QYeXTX8rZ
+aTDzjRzu5Aa8ij8C02/s8NPrStiPUBjfxGHKLx3H34Yw95o6qLt+0FvRAjPP
+zOF21uqEhHqYeeYOVqduJItdhem3cDglrWnTlAjjWzqYNBjU/heA8a0cZOKP
+vK/5AHOvtcOpvKKtnnEw820cbBVjip7D3WvrcORQScRmuHvtHNQm9rAZhcH4
+9g52p0xPGBrB3OvgkM5X8vw4zL0NDg6eL9s6SuDudXTQVWa6rQxzb4Ojw9L5
+9S3dcPc6Ofi2rWVlE4TJOzlMF5bRboa719khqnBmki/MvQ3ODo8ePj3zEu5e
+F4dfSdffbIG5t8HFoSRaVc4Y6F4AE+Sn1Q==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 41.}, {0, All}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], Automatic}]], "Output",
+ ImageSize->{184, 118},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->37728493]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"Flatten", "@", "hEMyearTargetCatch"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "All"}], "}"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->161106036],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxTTMoPSmViYGDQBGIQDQEf7MFUQ44DVMDhPwjUw/gcDhMOfdWIiU+D8gUc
+LlT2xj66kQzlizhsfcoyx7IwCcqXcFC3OPZq0sREKF/GoXjVRQfGfwlQvgLM
+HihQcmgUmftMxy8FKq7icM2g6n/LNph5ag4//vFH/9wLM0/DoVKueu1FaRhf
+y8H85Z+bG9bCzNdBM1/PwWNH+NKrEjDzDRwuVwuWWk2HmW/oYPi7tIRhFcw8
+Iwf9Dtb+Aj4Y3xjNPBOHA8ohJh8jYOaZOiQ7NWSd2gMzz8yh7GGM/LeDMP3m
+DvwiP59Uy8H4Fg4ijf+c29fD3GuJZr6VQ4QRS5egFMx8a4fXOmrXv8Dda+OQ
+x/3pZDncvbYOnbXXlh2Au9cOzTx7B+sChl7VSJh5Dg4RPw3vvYC5t8HBISD/
+cgXnIZh+R4e3tfaXOmDubXB0mBLorjsB7l4nVPMbnBzeTu9uFYe719nh14nl
+cT9g7m1wdph9LpGnCu5eFwc+Mx7tQzD3NrjAzQMAGMOSrA==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 41.}, {0, All}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], Automatic}]], "Output",
+ ImageSize->{184, 118},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->129371726]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["EMdaysOfFishing"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->324815203],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", "300", "}"}], "}"}]], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->499612942]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["EMtempDaysOfFishing"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->372312836],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", "0", "}"}], "}"}]], "Output",
+ ImageSize->{39, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->112071569]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMbiomassCatch", "[", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->4578745],
+
+Cell[BoxData[
+ RowBox[{"{", "162.78595481511985`", "}"}]], "Output",
+ ImageSize->{67, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->224223769]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMbiomassCatch", "[", 
+  RowBox[{"EMe", "\[Rule]", "EMtempDaysOfFishing"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->150537619],
+
+Cell[BoxData[
+ RowBox[{"{", "0", "}"}]], "Output",
+ ImageSize->{25, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->668517594]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMtempVesselCatch", "*", "EMfleet"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->153206390],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", "0", "}"}], "}"}], "}"}]], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->117641026]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMvesselCatch", "[", "]"}], "*", "EMfleet"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->18811595],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", "162.78595481511985`", "}"}], "}"}], "}"}]], "Output",
+ ImageSize->{95, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->319125632]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMvesselCatch", "[", 
+   RowBox[{"EMe", "\[Rule]", "EMtempDaysOfFishing"}], "]"}], "*", 
+  "EMfleet"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->119393524],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", "0", "}"}], "}"}], "}"}]], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->404612138]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMvesselProfit", "[", 
+  RowBox[{"EMe", "\[Rule]", "EMtempDaysOfFishing"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->885487],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", "0", "}"}], "}"}]], "Output",
+ ImageSize->{39, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->231713376]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMvesselProfit", "[", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->476062307],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", "0.6626839833401963`", "}"}], "}"}]], "Output",
+ ImageSize->{88, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->250105344]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`EconMult`\>\"", "]"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->597518442],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMsetup", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"{", "1", "}"}], "}"}], ",", "2", ",", "1"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->125568492],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"EconMult structure:\\n\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" targeted species (pEMtargetedSpecies)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" biounit (EMrelatedBioUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" fleet groups (pEMfleetUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" simulation period per year (EMinterval)\"\>"}],
+  SequenceForm[
+  "EconMult structure:\n", 1, " targeted species (pEMtargetedSpecies)\n", 1, 
+   " biounit (EMrelatedBioUnits)\n", 2, " fleet groups (pEMfleetUnits)\n", 1, 
+   " simulation period per year (EMinterval)"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->170462759]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"EMelOfEffortIsOneQ", "=", "True"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bEMuseCM", "=", "True"}], ";"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->492892263],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"pEMelOfBiomass", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"{", ".4", "}"}]}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMcatchability", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", ".000002", "}"}], ",", 
+      RowBox[{"{", ".000029", "}"}]}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EMfleet", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"500", ",", "400"}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EMdaysOfFishing", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"300", ",", "200"}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EMunitPrice", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "9", "}"}], ",", 
+      RowBox[{"{", "10", "}"}]}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMfixedCost", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMvariableEffortCost", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{".015", ",", ".004"}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pEMvariableCatchCost", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}], "}"}]}], ";"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->223339272],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{"SurplusProduction", ",", 
+    RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+    RowBox[{"IntrinsicGrowthRate", "\[Rule]", ".5"}], ",", 
+    RowBox[{"BiomassMaximum", "\[Rule]", "1000"}]}], "]"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->330140313],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BioUnitAtTime", "[", 
+   RowBox[{"1", ",", "t_"}], "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"BioUnitAtTime", "[", 
+     RowBox[{"1", ",", "t"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"BioUnitAtTime", "[", 
+      RowBox[{"1", ",", 
+       RowBox[{"t", "-", "1"}]}], "]"}], "+", 
+     RowBox[{"SurplusProduction", "[", 
+      RowBox[{"CurrentBiomass", "\[Rule]", 
+       RowBox[{"BioUnitAtTime", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{"t", "-", "1"}]}], "]"}]}], "]"}], "-", 
+     RowBox[{"Total", "@", 
+      RowBox[{"Flatten", "@", 
+       RowBox[{"EMfleetCatch", "[", 
+        RowBox[{"EMe", "\[RuleDelayed]", "EMtempDaysOfFishing"}], 
+        "]"}]}]}]}]}], ")"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->180107582],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"BioUnitAtTime", "[", 
+    RowBox[{"1", ",", "1"}], "]"}], "=", "950"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->208691035],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"effort", "=", 
+   RowBox[{"{", "}"}]}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->24776159],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"EconMult", "[", "]"}], ";", 
+    RowBox[{"AppendTo", "[", 
+     RowBox[{"effort", ",", 
+      RowBox[{"EMfleet", "*", "EMtempDaysOfFishing"}]}], "]"}]}], ",", 
+   RowBox[{"{", "40", "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->15690535],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"Flatten", "@", "hEMyearTargetBiomass"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "All"}], "}"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->171531954],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxVy1sog3EYx/FZSG5IEiOHYV4mZsw2p/22KXdEK2VR1JsWOcSFFtnMwmJF
+LqRI0lKLEBeKyBW5QOHCIYtMtBguUC6c3v//zVNPT9+nPkkNrVWsUCAQMN/7
+c//Gr/k9SyPgHvjfIdDMv1Ucsf1ch+PUXOy1+Qe4jsSx7GPDvzrEdTSEZ1uD
+Tp+D6zhoys+E6zM2rhMxevcuii4jXoxY+X32tpr4FDBTcxeKSeIlKA8+bN+x
+E8/APhoc5sgmPgMic7K3miE+E927t3XNTuKzIDYcnB9biZdhz2Sei8kkPgfx
+8t79/VTi5XCuvAasDBOfi+mM2Agt9XkQKTsUE1LiFeg6ibptoj4fE4vtT23U
+K+E2uKuk1KvAvivT7dSrUc8G7tZSX4Bk+bqxkfpCVJqKEhjqi+CbtRn7qC+G
+80a9aqS+BAmqyxeWeg0CFTOuNOqBE4fn2Uq8BXj4fGV5r4UkaHuTeosWnZNX
+47zXQZRouOa9DlZXSw3v9QhbeFzjvR75y7ox3peiRxvq+fFfh2ChxQ==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 40.}, {0, All}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], Automatic}]], "Output",
+ ImageSize->{184, 117},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->387390403]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"Transpose", "[", 
+    RowBox[{"Total", " ", "/@", " ", "effort"}], "]"}], "/", "1000"}], 
+  "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10001.},
+ CellLabel->"In[1]:=",
+ CellID->256061598],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxdy0sKgzAYReGfjhx20EEHDqoUERHpu9ZXonYFLkHouFtwaS7JJdSqCDmB
+EL5cjtN+m89GRPzx/t/5DGp6+lYvH9q0pcU4W3gH79Hb2A+wCx/Re9h9OIBD
+9BH2E3yGL+iv2G/wHX6gf2KP4RecoE+xZ3AOF+gVdm26g6U0+67EXqGHpUZf
+Y3+v/gE/QyVb
+     "]]}, 
+   {Hue[0.9060679774997897, 0.6, 0.6], LineBox[CompressedData["
+1:eJxdy0sKglAYhuGfRg4bOGjgICNERCTtoubtWK0gWkHQ2C20ZJegokc47w9y
+eHz53G/3/m1ExB+/6Z2vb+b3o5YfyrSlxLgtug3vYAf7PfoBPsIe9j56AIdw
+hP0JPYYT+Iz9Bf0K3+AU+ww9h+9wgX2JXsE13GCvzP6HpUXX1vdAh+WJrq3v
+tfYB4CcnfQ==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0., 40.}, {0., 150.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{184, 115},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->407463829],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"Total", " ", "/@", " ", 
+    RowBox[{"Total", " ", "/@", " ", "effort"}]}], "/", "1000"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->56211015],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxdy00KglAUhuGDo4YNHDhokBEiIlL2Y5rpNVtBuILAWdAWXJpLcgmpXYL7
+XpDDK9/jvj7P1hIRf/ym+3tDOZ/+rfQPZfZCifGWuht9bbQDv4JfY79Bb+E9
+eB/7AB3CR/A77PfoGP4Af8T+hD7DJ/AX7FN0Bn+Fz7G/oQv4El6Z+w4tlem7
+Cv4Oj5YavoZ//PdfljowxQ==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0., 40.}, {0., 230.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{184, 115},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->151792409]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"EconMult - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 59, 19.3619362}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Econ Mult Tutorial", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "EconMult is a fleet model designed to be a part of a bioeconomic \
+simulation model. First of all EconMult is meant to perform numerical \
+calculations, but it may also be capable of doing simple analytical \
+operations. XXXX.", "synonyms" -> {}, "title" -> "EconMult", "type" -> 
+    "Tutorial", "uri" -> "EconMult/tutorial/EconMult"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 78, 1, 70, "TutorialColorBar"],
+Cell[682, 24, 179, 5, 70, "LinkTrail"],
+Cell[864, 31, 1867, 41, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2756, 76, 45, 1, 70, "Title",
+ CellID->509267359],
+Cell[2804, 79, 263, 5, 70, "Text",
+ CellID->1534169418],
+Cell[3070, 86, 45, 1, 70, "Caption",
+ CellID->1891092685],
+Cell[3118, 89, 145, 4, 70, "Input",
+ CellID->2058623809],
+Cell[3266, 95, 320, 8, 70, "Input",
+ CellID->74831514],
+Cell[3589, 105, 813, 24, 70, "Input",
+ CellID->60208738],
+Cell[4405, 131, 176, 6, 70, "Input",
+ CellID->3381494],
+Cell[CellGroupData[{
+Cell[4606, 141, 98, 3, 70, "Input",
+ CellID->378250152],
+Cell[CellGroupData[{
+Cell[4729, 148, 150, 3, 70, "Print",
+ CellID->548357141],
+Cell[4882, 153, 148, 3, 70, "Print",
+ CellID->511771658],
+Cell[5033, 158, 150, 3, 70, "Print",
+ CellID->97635340],
+Cell[5186, 163, 800, 16, 70, "Print",
+ CellID->612532138]
+}, Open  ]]
+}, Open  ]],
+Cell[6013, 183, 210, 6, 70, "Input",
+ CellID->434219081],
+Cell[6226, 191, 1180, 38, 70, "Input",
+ CellID->573315782],
+Cell[7409, 231, 176, 6, 70, "Input",
+ CellID->27013149],
+Cell[CellGroupData[{
+Cell[7610, 241, 271, 8, 70, "Input",
+ CellID->409111507],
+Cell[7884, 251, 1040, 25, 139, "Output",
+ CellID->37728493]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8961, 281, 269, 8, 70, "Input",
+ CellID->161106036],
+Cell[9233, 291, 992, 24, 139, "Output",
+ CellID->129371726]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10262, 320, 84, 2, 70, "Input",
+ CellID->324815203],
+Cell[10349, 324, 205, 7, 36, "Output",
+ CellID->499612942]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10591, 336, 88, 2, 70, "Input",
+ CellID->372312836],
+Cell[10682, 340, 203, 7, 36, "Output",
+ CellID->112071569]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10922, 352, 103, 3, 70, "Input",
+ CellID->4578745],
+Cell[11028, 357, 198, 6, 36, "Output",
+ CellID->224223769]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11263, 368, 159, 4, 70, "Input",
+ CellID->150537619],
+Cell[11425, 374, 180, 6, 36, "Output",
+ CellID->668517594]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11642, 385, 114, 3, 70, "Input",
+ CellID->153206390],
+Cell[11759, 390, 227, 8, 36, "Output",
+ CellID->117641026]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12023, 403, 132, 4, 70, "Input",
+ CellID->18811595],
+Cell[12158, 409, 245, 8, 36, "Output",
+ CellID->319125632]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12440, 422, 191, 6, 70, "Input",
+ CellID->119393524],
+Cell[12634, 430, 227, 8, 36, "Output",
+ CellID->404612138]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12898, 443, 156, 4, 70, "Input",
+ CellID->885487],
+Cell[13057, 449, 203, 7, 36, "Output",
+ CellID->231713376]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13297, 461, 105, 3, 70, "Input",
+ CellID->476062307],
+Cell[13405, 466, 221, 7, 36, "Output",
+ CellID->250105344]
+}, Open  ]],
+Cell[13641, 476, 144, 4, 70, "Input",
+ CellID->597518442],
+Cell[CellGroupData[{
+Cell[13810, 484, 185, 6, 70, "Input",
+ CellID->125568492],
+Cell[13998, 492, 802, 16, 70, "Print",
+ CellID->170462759]
+}, Open  ]],
+Cell[14815, 511, 210, 6, 70, "Input",
+ CellID->492892263],
+Cell[15028, 519, 1503, 54, 70, "Input",
+ CellID->223339272],
+Cell[16534, 575, 321, 8, 70, "Input",
+ CellID->330140313],
+Cell[16858, 585, 781, 23, 70, "Input",
+ CellID->180107582],
+Cell[17642, 610, 178, 6, 70, "Input",
+ CellID->208691035],
+Cell[17823, 618, 133, 5, 70, "Input",
+ CellID->24776159],
+Cell[17959, 625, 320, 10, 70, "Input",
+ CellID->15690535],
+Cell[CellGroupData[{
+Cell[18304, 639, 271, 8, 70, "Input",
+ CellID->171531954],
+Cell[18578, 649, 1000, 24, 138, "Output",
+ CellID->387390403]
+}, Open  ]],
+Cell[19593, 676, 272, 8, 70, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10001.},
+ CellID->256061598],
+Cell[19868, 686, 936, 26, 136, "Output",
+ CellID->407463829],
+Cell[CellGroupData[{
+Cell[20829, 716, 220, 7, 70, "Input",
+ CellID->56211015],
+Cell[21052, 725, 674, 20, 136, "Output",
+ CellID->151792409]
+}, Open  ]]
+}, Open  ]],
+Cell[21753, 749, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

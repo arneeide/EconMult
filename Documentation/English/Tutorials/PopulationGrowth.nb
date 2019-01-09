@@ -1,0 +1,942 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     33762,        932]
+NotebookOptionsPosition[     30028,        806]
+NotebookOutlinePosition[     31668,        852]
+CellTagsIndexPosition[     31625,        849]
+WindowTitle->PopulationGrowth - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "TutorialColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECON MULT TUTORIAL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/tutorial/PopulationGrowth\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/tutorial/PopulationGrowth"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/tutorial/\
+PopulationGrowth.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/tutorial/PopulationGrowth", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["PopulationGrowth", "Title",
+ CellID->509267359],
+
+Cell["XXXX.", "Caption",
+ CellID->1891092685],
+
+Cell["Loading the package", "MathCaption",
+ CellID->836781195],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->2058623809],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "'"}], "[", "t", "]"}], "==", 
+       RowBox[{"SurplusProduction", "[", 
+        RowBox[{
+         RowBox[{"CurrentBiomass", "\[Rule]", 
+          RowBox[{"x", "[", "t", "]"}]}], ",", 
+         RowBox[{"UseMSY", "\[Rule]", "False"}]}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"x", "[", "0", "]"}], "\[Equal]", "C"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", "[", "t", "]"}], "}"}], ",", "t"}], "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->18872548],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "::", "\<\"ifun\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Inverse functions are being used by \
+\\\\\\\"\\\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Solve\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\", so some solutions may \
+not be found; use Reduce for complete solution information.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Solve/ifun\\\", ButtonNote -> \
+\\\"Solve::ifun\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->373848751],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {
+       RowBox[{
+        RowBox[{"x", "(", "t", ")"}], "\[Rule]", 
+        FractionBox[
+         RowBox[{"C", " ", "\<\"K\"\>", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"r\"\>", " ", "t"}]]}], 
+         RowBox[{
+          RowBox[{"C", " ", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"\<\"r\"\>", " ", "t"}]]}], "-", "C", 
+          "+", "\<\"K\"\>"}]]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{107, 29},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->9973297]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solve", "=", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "'"}], "[", "t", "]"}], "==", 
+       RowBox[{"SurplusProduction", "[", 
+        RowBox[{
+         RowBox[{"CurrentBiomass", "\[Rule]", 
+          RowBox[{"x", "[", "t", "]"}]}], ",", 
+         RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+         RowBox[{"BiomassMaximum", "\[Rule]", "1000"}], ",", 
+         RowBox[{"IntrinsicGrowthRate", "\[Rule]", ".5"}]}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"x", "[", "0", "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", "[", "t", "]"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "100"}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->205841802],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     TagBox[
+      RowBox[{"InterpolatingFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "100.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+       "]"}],
+      False,
+      Editable->False], "[", "t", "]"}]}], "}"}], "}"}]], "Output",
+ ImageSize->{365, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->253409267]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], "/.", "solve"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "25"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->336377769],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+sfGY7jkhhBBCiA//A8acr08=
+    "], {{0, 116}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 116},
+  PlotRange->{{0, 180}, {0, 116}}]], "Output",
+ ImageSize->{184, 116},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->350818751]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"SurplusProduction", "[", 
+    RowBox[{
+     RowBox[{"CurrentBiomass", "\[Rule]", 
+      RowBox[{"Evaluate", "[", 
+       RowBox[{
+        RowBox[{"x", "[", "t", "]"}], "/.", "solve"}], "]"}]}], ",", 
+     RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+     RowBox[{"BiomassMaximum", "\[Rule]", "1000"}], ",", 
+     RowBox[{"IntrinsicGrowthRate", "\[Rule]", ".5"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "25"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->1017499883],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+CpEUbu/gBwKBQCAQCEzgfw7/IfQ=
+    "], {{0, 115}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 115},
+  PlotRange->{{0, 180}, {0, 115}}]], "Output",
+ ImageSize->{184, 115},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->65235443]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "[", "t", "]"}], "/.", "solve"}], ",", 
+      RowBox[{"SurplusProduction", "[", 
+       RowBox[{
+        RowBox[{"CurrentBiomass", "\[Rule]", 
+         RowBox[{"Evaluate", "[", 
+          RowBox[{
+           RowBox[{"x", "[", "t", "]"}], "/.", "solve"}], "]"}]}], ",", 
+        RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+        RowBox[{"BiomassMaximum", "\[Rule]", "1000"}], ",", 
+        RowBox[{"IntrinsicGrowthRate", "\[Rule]", ".5"}]}], "]"}]}], "}"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "25"}], "}"}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", 
+    RowBox[{"1", "/", "GoldenRatio"}]}]}], "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->16955192],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+H/8DYhUSLA==
+    "], {{0, 111}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 111},
+  PlotRange->{{0, 180}, {0, 111}}]], "Output",
+ ImageSize->{184, 111},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->8313724]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"SurplusProduction", "[", 
+    RowBox[{
+     RowBox[{"CurrentBiomass", "\[Rule]", "x"}], ",", 
+     RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+     RowBox[{"BiomassMaximum", "\[Rule]", "1000"}], ",", 
+     RowBox[{"IntrinsicGrowthRate", "\[Rule]", ".5"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1000"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->9141230],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+CNPD/8iRDLE=
+    "], {{0, 112}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 112},
+  PlotRange->{{0, 180}, {0, 112}}]], "Output",
+ ImageSize->{184, 112},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]=",
+ CellID->495124635]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "'"}], "[", "t", "]"}], "==", 
+      RowBox[{"SurplusProduction", "[", 
+       RowBox[{
+        RowBox[{"CurrentBiomass", "\[Rule]", 
+         RowBox[{"x", "[", "t", "]"}]}], ",", 
+        RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+        RowBox[{"GrowthModel", "\[Rule]", "GompertzFox"}]}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "C"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "[", "t", "]"}], "}"}], ",", "t"}], "]"}]], "Input",
+ CellLabel->"In[8]:=",
+ CellID->333240518],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "::", "\<\"ifun\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Inverse functions are being used by \
+\\\\\\\"\\\", \\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\!\\(Solve\\), \
+\\\"MT\\\"]\\)\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\", so some solutions may \
+not be found; use Reduce for complete solution information.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Solve/ifun\\\", ButtonNote -> \
+\\\"Solve::ifun\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[8]:=",
+ CellID->179404241],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["C", "PGK"], ")"}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "PGrr"}], " ", "t"}]]], " ", "PGK"}]}], "}"}], 
+  "}"}]], "Output",
+ ImageSize->{181, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[8]=",
+ CellID->196813502]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "[", 
+  RowBox[{
+   RowBox[{"x", "[", "t", "]"}], "/.", 
+   RowBox[{"%", "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], "]"}]], "Input",
+ CellLabel->"In[9]:=",
+ CellID->140582912],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"K\"\>", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["C", "\<\"K\"\>"], ")"}], 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", "\<\"r\"\>"}], " ", "t"}]]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{60, 37},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[9]//TraditionalForm=",
+ CellID->18992591]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "'"}], "[", "t", "]"}], "==", 
+      RowBox[{"SurplusProduction", "[", 
+       RowBox[{
+        RowBox[{"CurrentBiomass", "\[Rule]", 
+         RowBox[{"x", "[", "t", "]"}]}], ",", 
+        RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+        RowBox[{"GrowthModel", "\[Rule]", "RichardsPellaTomlinson"}]}], 
+       "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "C"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "[", "t", "]"}], "}"}], ",", "t"}], "]"}]], "Input",
+ CellLabel->"In[10]:=",
+ CellID->439650710],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "::", "\<\"tdep\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"The equations appear to involve the \
+variables to be solved for in an essentially non-algebraic way.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Solve/tdep\\\", ButtonNote -> \
+\\\"Solve::tdep\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[10]:=",
+ CellID->201614506],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"InverseFunction", "[", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["PGK", 
+          RowBox[{"-", "PGmm"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"PGmm", " ", 
+            RowBox[{"Log", "[", "#1", "]"}]}], "-", 
+           RowBox[{"Log", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["PGK", "PGmm"]}], " ", "#1"}], "+", 
+             RowBox[{"PGK", " ", 
+              SuperscriptBox["#1", "PGmm"]}]}], "]"}]}], ")"}]}], 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", "PGmm"}]], "&"}], "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["PGK", 
+        RowBox[{"-", "PGmm"}]], " ", "PGrr", " ", "t"}], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["PGK", 
+         RowBox[{"-", "PGmm"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"PGmm", " ", 
+           RowBox[{"Log", "[", "C", "]"}]}], "-", 
+          RowBox[{"Log", "[", 
+           RowBox[{
+            RowBox[{
+             SuperscriptBox["C", "PGmm"], " ", "PGK"}], "-", 
+            RowBox[{"C", " ", 
+             SuperscriptBox["PGK", "PGmm"]}]}], "]"}]}], ")"}]}], 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "PGmm"}]]}], "]"}]}], "}"}], "}"}]], "Output",
+ ImageSize->{541, 72},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[10]=",
+ CellID->223938812]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "'"}], "[", "t", "]"}], "==", 
+      RowBox[{"SurplusProduction", "[", 
+       RowBox[{
+        RowBox[{"CurrentBiomass", "\[Rule]", 
+         RowBox[{"x", "[", "t", "]"}]}], ",", 
+        RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+        RowBox[{"GrowthModel", "\[Rule]", "QuasiBevertonHolt"}]}], "]"}]}], 
+     ",", 
+     RowBox[{
+      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "C"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "[", "t", "]"}], "}"}], ",", "t"}], "]"}]], "Input",
+ CellLabel->"In[11]:=",
+ CellID->88746643],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "::", "\<\"tdep\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"The equations appear to involve the \
+variables to be solved for in an essentially non-algebraic way.\\\\\\\"\\\", \
+\\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Solve/tdep\\\", ButtonNote -> \
+\\\"Solve::tdep\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[11]:=",
+ CellID->742057591],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"InverseFunction", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"PGb", " ", 
+         RowBox[{"Log", "[", "#1", "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "-", "PGb"}], ")"}], " ", 
+         RowBox[{"Log", "[", 
+          RowBox[{
+           RowBox[{"-", "#1"}], "+", 
+           RowBox[{
+            SuperscriptBox["PGK", 
+             FractionBox["1", 
+              RowBox[{"1", "+", "PGb"}]]], " ", 
+            SuperscriptBox["#1", 
+             FractionBox["PGb", 
+              RowBox[{"1", "+", "PGb"}]]]}]}], "]"}]}]}], "&"}], "]"}], "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "PGrr"}], " ", "t"}], "+", 
+      RowBox[{"PGb", " ", 
+       RowBox[{"Log", "[", "C", "]"}]}], "-", 
+      RowBox[{"Log", "[", 
+       RowBox[{
+        RowBox[{"-", "C"}], "+", 
+        RowBox[{
+         SuperscriptBox["C", 
+          FractionBox["PGb", 
+           RowBox[{"1", "+", "PGb"}]]], " ", 
+         SuperscriptBox["PGK", 
+          FractionBox["1", 
+           RowBox[{"1", "+", "PGb"}]]]}]}], "]"}], "-", 
+      RowBox[{"PGb", " ", 
+       RowBox[{"Log", "[", 
+        RowBox[{
+         RowBox[{"-", "C"}], "+", 
+         RowBox[{
+          SuperscriptBox["C", 
+           FractionBox["PGb", 
+            RowBox[{"1", "+", "PGb"}]]], " ", 
+          SuperscriptBox["PGK", 
+           FractionBox["1", 
+            RowBox[{"1", "+", "PGb"}]]]}]}], "]"}]}]}], "]"}]}], "}"}], 
+  "}"}]], "Output",
+ ImageSize->{534, 59},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[11]=",
+ CellID->843075404]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PopulationGrowth - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 59, 21.2050416}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Econ Mult Tutorial", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "XXXX. Loading the package", "synonyms" -> {}, "title" -> 
+    "PopulationGrowth", "type" -> "Tutorial", "uri" -> 
+    "EconMult/tutorial/PopulationGrowth"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[609, 21, 78, 1, 70, "TutorialColorBar"],
+Cell[690, 24, 179, 5, 70, "LinkTrail"],
+Cell[872, 31, 1901, 41, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2798, 76, 53, 1, 70, "Title",
+ CellID->509267359],
+Cell[2854, 79, 45, 1, 70, "Caption",
+ CellID->1891092685],
+Cell[2902, 82, 62, 1, 70, "MathCaption",
+ CellID->836781195],
+Cell[2967, 85, 156, 5, 70, "Input",
+ CellID->2058623809],
+Cell[CellGroupData[{
+Cell[3148, 94, 632, 19, 70, "Input",
+ CellID->18872548],
+Cell[3783, 115, 673, 12, 70, "Message",
+ CellID->373848751],
+Cell[4459, 129, 1160, 33, 64, "Output",
+ CellID->9973297]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5656, 167, 821, 23, 70, "Input",
+ CellID->205841802],
+Cell[6480, 192, 537, 19, 36, "Output",
+ CellID->253409267]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7054, 216, 242, 8, 28, "Input",
+ CellID->336377769],
+Cell[7299, 226, 2834, 54, 137, "Output",
+ CellID->350818751]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10170, 285, 565, 15, 47, "Input",
+ CellID->1017499883],
+Cell[10738, 302, 3264, 61, 136, "Output",
+ CellID->65235443]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14039, 368, 830, 23, 83, "Input",
+ CellID->16955192],
+Cell[14872, 393, 3125, 59, 132, "Output",
+ CellID->8313724]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18034, 457, 458, 12, 47, "Input",
+ CellID->9141230],
+Cell[18495, 471, 3127, 59, 133, "Output",
+ CellID->495124635]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21659, 535, 653, 19, 70, "Input",
+ CellID->333240518],
+Cell[22315, 556, 673, 12, 70, "Message",
+ CellID->179404241],
+Cell[22991, 570, 473, 17, 56, "Output",
+ CellID->196813502]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23501, 592, 211, 7, 70, "Input",
+ CellID->140582912],
+Cell[23715, 601, 483, 16, 72, "Output",
+ CellID->18992591]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24235, 622, 673, 20, 70, "Input",
+ CellID->439650710],
+Cell[24911, 644, 524, 10, 70, "Message",
+ CellID->201614506],
+Cell[25438, 656, 1568, 49, 93, "Output",
+ CellID->223938812]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27043, 710, 665, 20, 70, "Input",
+ CellID->88746643],
+Cell[27711, 732, 524, 10, 70, "Message",
+ CellID->742057591],
+Cell[28238, 744, 1736, 56, 80, "Output",
+ CellID->843075404]
+}, Open  ]]
+}, Open  ]],
+Cell[30001, 804, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

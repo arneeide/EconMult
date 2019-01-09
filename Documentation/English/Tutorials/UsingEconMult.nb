@@ -1,0 +1,910 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     32691,        900]
+NotebookOptionsPosition[     28315,        756]
+NotebookOutlinePosition[     30256,        806]
+CellTagsIndexPosition[     30213,        803]
+WindowTitle->Using EconMult - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "TutorialColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECON MULT TUTORIAL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"Functions \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EMa\"\>":>Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMa"], "\<\"EMbeta\"\>":>Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMbeta"], "\<\"EMbiomass\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMbiomass"], "\<\"EMdaysOfFishing\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMdaysOfFishing"], "\<\"EMe\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/EMe"], "\<\"EMfleet\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/EMfleet"], "\<\"EMn\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/EMn"], "\<\"EMp\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/EMp"], "\<\"EMq\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/EMq"], "\<\"EMrbu\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMrbu"], "\<\"EMrelatedBioUnits\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMrelatedBioUnits"], "\<\"EMsetup\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMsetup"], "\<\"EMunitPrice\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMunitPrice"], "\<\"EMx\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/EMx"], "\<\"pEMcatchability\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/pEMcatchability"], "\<\"pEMelOfBiomass\"\>":>
+       Documentation`HelpLookup[
+       "paclet:EconMult/ref/pEMelOfBiomass"], "\<\"pEMelOfEffort\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/pEMelOfEffort"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EconMult/tutorial/UsingEconMult\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/tutorial/UsingEconMult"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/tutorial/\
+UsingEconMult.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/tutorial/UsingEconMult", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Using EconMult", "Title",
+ CellID->509267359],
+
+Cell[BoxData[GridBox[{
+   {
+    RowBox[{
+     ButtonBox["EMsetup",
+      BaseStyle->"Link",
+      ButtonData->"paclet:EconMult/ref/EMsetup"], "[", "]"}], Cell[
+    "Basic set up of EconMult, corresponds to EconMult[{{1}},1,1]", 
+     "TableText"]},
+   {
+    RowBox[{
+     ButtonBox["EMsetup",
+      BaseStyle->"Link",
+      ButtonData->"paclet:EconMult/ref/EMsetup"], "[", 
+     RowBox[{"bio", ",", " ", "n", ",", " ", "t"}], "]"}], Cell["\<\
+EconMult set up with bio being the biomass unit relations, n the number of \
+fleets and t the number of time units within a period of one year. \
+\>", "TableText"]}
+  }]], "DefinitionBox",
+ CellID->2096742444],
+
+Cell["EconMult set up.", "Caption",
+ CellID->1891092685],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`EconMult`\>\"", "]"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->287950534],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMsetup", "[", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->378250152],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No biomass vector was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->643226538],
+
+Cell[BoxData["\<\"No fleet vector was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->62413908],
+
+Cell[BoxData["\<\"No period interval was found. Assuming single value\"\>"], \
+"Print",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->372145285],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"EconMult structure:\\n\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" targeted species (pEMtargetedSpecies)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" biounit (EMrelatedBioUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" fleet group (pEMfleetUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" simulation period per year (EMinterval)\"\>"}],
+  SequenceForm[
+  "EconMult structure:\n", 1, " targeted species (pEMtargetedSpecies)\n", 1, 
+   " biounit (EMrelatedBioUnits)\n", 1, " fleet group (pEMfleetUnits)\n", 1, 
+   " simulation period per year (EMinterval)"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->269842569]
+}, Open  ]]
+}, Open  ]],
+
+Cell["The following are given values though executing EMsetup:", "Text",
+ CellID->52957391],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["EMbiomass"], "Input",
+ CellLabel->"In[9]:=",
+ CellID->28105237],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"BioUnit", "[", "1", "]"}], "}"}]], "Output",
+ ImageSize->{88, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[9]=",
+ CellID->647402908]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["EMfleet"], "Input",
+ CellLabel->"In[10]:=",
+ CellID->785028716],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"FleetUnit", "[", 
+    RowBox[{"1", ",", "1"}], "]"}], "}"}], "}"}]], "Output",
+ ImageSize->{134, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[10]=",
+ CellID->54508791]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["EMinterval"], "Input",
+ CellLabel->"In[11]:=",
+ CellID->184118582],
+
+Cell[BoxData["1"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[11]=",
+ CellID->220291808]
+}, Open  ]],
+
+Cell["\<\
+Setting up a model with two targetet species ({1,2} and 3) where the first is \
+defined by two biomass units (1 and 2) while the second is defined by one \
+biomass unit (3). The setup also includes two fleet groups and four time \
+steps per year (quarters).\
+\>", "Text",
+ CellID->302327231],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMsetup", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", "3"}], "}"}], ",", "2", ",", "4"}],
+   "]"}]], "Input",
+ CellLabel->"In[16]:=",
+ CellID->531538698],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"EconMult structure:\\n\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" targeted species (pEMtargetedSpecies)\\n\"\>", 
+   "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\" biounits (EMrelatedBioUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" fleet groups (pEMfleetUnits)\\n\"\>", 
+   "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\" simulation periods per year (EMinterval)\"\>"}],
+  SequenceForm[
+  "EconMult structure:\n", 2, " targeted species (pEMtargetedSpecies)\n", 3, 
+   " biounits (EMrelatedBioUnits)\n", 2, " fleet groups (pEMfleetUnits)\n", 4,
+    " simulation periods per year (EMinterval)"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[16]:=",
+ CellID->957230519]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox["EMx",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMx"], Cell[TextData[{
+     "Biomass vector, default value is ",
+     Cell[BoxData[
+      ButtonBox["EMbiomass",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/EMbiomass"]], "InlineFormula"]
+    }], "TableText"]},
+   {
+    ButtonBox["EMrbu",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMrbu"], Cell[TextData[{
+     "Matrix reflecting relation between biomass units, default value is ",
+     Cell[BoxData[
+      ButtonBox["EMrelatedBioUnits",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/EMrelatedBioUnits"]], "InlineFormula"]
+    }], "TableText"]},
+   {
+    ButtonBox["EMq",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMq"], Cell[TextData[{
+     "Catchability marix, default value is ",
+     Cell[BoxData[
+      ButtonBox["pEMcatchability",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/pEMcatchability"]], "InlineFormula"]
+    }], "TableText"]},
+   {
+    ButtonBox["EMa",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMa"], Cell[TextData[{
+     "Effort-output elasticity matrix, default value ",
+     Cell[BoxData[
+      ButtonBox["pEMelOfEffort",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/pEMelOfEffort"]], "InlineFormula"]
+    }], "TableText"]},
+   {
+    ButtonBox["EMbeta",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMbeta"], Cell[TextData[{
+     "Stock-output elasticity matrix, default valule ",
+     Cell[BoxData[
+      ButtonBox["pEMelOfBiomass",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/pEMelOfBiomass"]], "InlineFormula"]
+    }], "TableText"]},
+   {
+    ButtonBox["EMn",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMn"], Cell[TextData[{
+     "Fleet matrix giving number of vessels within each fleet, default value \
+is ",
+     Cell[BoxData[
+      ButtonBox["EMfleet",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/EMfleet"]], "InlineFormula"]
+    }], "TableText"]},
+   {
+    ButtonBox["EMe",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMe"], Cell[TextData[{
+     "Effort matrix giving number of fishing days per vessels within each \
+fleet, default value is ",
+     Cell[BoxData[
+      ButtonBox["EMdaysOfFishing",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/EMdaysOfFishing"]], "InlineFormula"]
+    }], "TableText"]},
+   {
+    ButtonBox["EMp",
+     BaseStyle->"Link",
+     ButtonData->"paclet:EconMult/ref/EMp"], Cell[TextData[{
+     "Matrix of unit price per biomass unit, default value is ",
+     Cell[BoxData[
+      ButtonBox["EMunitPrice",
+       BaseStyle->"Link",
+       ButtonData->"paclet:EconMult/ref/EMunitPrice"]], "InlineFormula"]
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->268711031],
+
+Cell["EconMult options.", "Caption",
+ CellID->102330857],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Options", "[", "EconMult", "]"}]], "Input",
+ CellLabel->"In[24]:=",
+ CellID->49146945],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"EMa", "\[RuleDelayed]", "pEMelOfEffort"}], ",", 
+   RowBox[{"EMbeta", "\[RuleDelayed]", "pEMelOfBiomass"}], ",", 
+   RowBox[{"EMx", "\[RuleDelayed]", "EMbiomass"}], ",", 
+   RowBox[{"EMe", "\[RuleDelayed]", "EMdaysOfFishing"}], ",", 
+   RowBox[{"EMq", "\[RuleDelayed]", "pEMcatchability"}], ",", 
+   RowBox[{"EMn", "\[RuleDelayed]", "EMfleet"}], ",", 
+   RowBox[{"EMrbu", "\[RuleDelayed]", "EMrelatedBioUnits"}], ",", 
+   RowBox[{"EMp", "\[RuleDelayed]", "EMunitPrice"}], ",", 
+   RowBox[{"EMfc", "\[RuleDelayed]", "pEMfixedCost"}], ",", 
+   RowBox[{"EMvec", "\[RuleDelayed]", "pEMvariableEffortCost"}], ",", 
+   RowBox[{"EMvcc", "\[RuleDelayed]", "pEMvariableCatchCost"}], ",", 
+   RowBox[{"EMbiomassGrowth", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"EMquotaType", "\[Rule]", "Fixed"}]}], "}"}]], "Output",
+ ImageSize->{581, 67},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[24]=",
+ CellID->227225249]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "@", "pEMelOfEffort"}]], "Input",
+ CellLabel->"In[26]:=",
+ CellID->23327585],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"1", ",", "1", ",", "1"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"1", ",", "1", ",", "2"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"1", ",", "1", ",", "3"}], "]"}]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"1", ",", "2", ",", "1"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"1", ",", "2", ",", "2"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"1", ",", "2", ",", "3"}], "]"}]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"2", ",", "1", ",", "1"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"2", ",", "1", ",", "2"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"2", ",", "1", ",", "3"}], "]"}]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"2", ",", "2", ",", "1"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"2", ",", "2", ",", "2"}], "]"}]},
+          {
+           RowBox[{"ElasticityOfEffort", "[", 
+            RowBox[{"2", ",", "2", ",", "3"}], "]"}]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ ImageSize->{438, 89},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[26]//MatrixForm=",
+ CellID->71468520]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMnotation", "@", 
+  RowBox[{"MatrixForm", "@", 
+   RowBox[{"EMfleetCatch", "[", "]"}]}]}]], "Input",
+ CellLabel->"In[30]:=",
+ CellID->364081538],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 153}, {284, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{284, 153},
+  PlotRange->{{0, 284}, {0, 153}}]], "Output",
+ ImageSize->{288, 153},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[30]//TraditionalForm=",
+ CellID->220894907]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMnotation", "@", 
+  RowBox[{"MatrixForm", "@", "EMbiomass"}]}]], "Input",
+ CellLabel->"In[36]:=",
+ CellID->74801411],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", 
+     TagBox[GridBox[{
+        {
+         SubscriptBox["x", "1"]},
+        {
+         SubscriptBox["x", "2"]},
+        {
+         SubscriptBox["x", "3"]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+         "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.5599999999999999]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      Column], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{32, 48},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[36]//TraditionalForm=",
+ CellID->331006439]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EMnotation", "@", 
+  RowBox[{"MatrixForm", "@", "EMunitPrice"}]}]], "Input",
+ CellLabel->"In[35]:=",
+ CellID->232499722],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztnSFTI0EQham6P4BEcg6JpFBIZOoUMoVIcepO4pCRxEUiI3EgI5H5ARGR
+SCQyNzu7cJtMd7a7p3e2Rb8q6kLvJPPl3e6kthkeP2///Lr9cXR09Dt8/Q1f
+1eOty+VyubL1/PxMrq9nl2H1vZxMqn8mLzoAi8Xi8/OT9ZTB2bD63d3dZrOh
+12vqy9l6+zKJ0PW72MOnFyuFicbjMf6edNnCsUrVsAw2sL6ISgdj9XrihqRh
+rmspCb3YzPj4+AjOqMu2ns1edkeI2dL62dkZeNJidRhZw88wXZgUOtIHWz1m
+9wzls+3VV6vVaDRKh2H1BjRSVJfH/8kV/AwKl89yuUQO6rLF4bNdO0Vs7fp0
+Or2/v0/HYPXt99Kzv/ro+BmunYeHB+SgLls1OqlK2Nr1m5ub+XyejsHq0Jpz
+gITtZ/jIvrq6Qg6qssFjJWztenjw9PSUjsHqGHL787J6HMd0FlOFC+fi4gJ5
+Q2ps9Qd5rfCMTLZ2Paylr6+v6Ri4/nU5IRM2Yp+Uu2ynp6eHx1hja9ePj4/B
+NRar9y2Kn9bY2vXwHwqyYfW+RfHTGpv7KZP7qSv3U1fup67cT125n7pyP3XV
+m5+99MBTNkzW2BTOT3l//vAtssb5Ke/PC9ny/RT35/HGeAezLhuIIWbTuN5z
++vP1E+GzQON6z+nPS9hy/cztz8fX2G+MdzD3wIZicNky/czuz4ON8Q7mHtgQ
+DD5bnp/Z/Xl0fTrErM8GjhWxZfmZ15/fa4zTmXXZwP68mE3up43+vDU2vz+S
+yf3UlfupK/dTV+6nrtxPXbmfunI/dZXj58nJiSnmtqyxUfw8Pz/HdtQP3p+3
+xkbxE93DVkvcn/+6ST7QA+/cr6jBBrXipWwUP8fj8YGt7PL98+t18zQEOpx4
+19fX2LxabHArXspG8XM+n2N7gBX681/vJ9U0CplXl60ek3jHZ6P4udls0Osu
+rz/fXGnI0jYajVarFTyvMlscvtuKl7FR/NzGZf/9/R1Ezu3PI/WPj48wKQjT
+AxvWimezEf0MdWiZyt8/H18F+hlNmA7/4NZmw1vxXDain9u4Yry9vVEwiP35
+7/MnfY0wEb4qKrOB/XkxG93Pbfxln4Sslx74vjkEGWFj+enqlPupK/dTV+6n
+rtxPXbmfunI/deV+6sr91BXLz8EzZOyz0f0kZ8jQ42LK59vQt8oL2Yh+0jNk
+mHExRfNtmFvlJWxEP5kZMvW3lLiY8vk2IBsduION4ic/QyYeIcXFlM+3Adno
+wB1sFD/5GTL0uJjy+Tb0rfISNoqf7AwZRlxM8XwbxlZ5CVvWz98hDEpczFD5
+NpSt8vn5Np1+WsuQscxG8dNahkxb1tgofg51H0rx0xqb+ymT+6kr91NX7qeu
+3E9duZ+6cj911Zufnm+D1oXnp7w/Xz7fht6ft5JvQ293l8+3offnjeXb1N9S
+291l823QGQ3n28Qj5HZ32XwbdEbD+TacdnfpfBtOlI2RfBt6u7t8vg29P28j
+34beny+fb0Pvz3u+jRE2vz+Syf3UlfupK/dTV+6nrtxPXbmfunI/dUXxE8uK
+sZYh05Y1tnYdy4qxliFjma1dZ//9uFri/vwA+TbkVnxGvs13HcuKYWXIMLaj
+F8+3YbTipWztOpYVw8+QAVGM5NuAbEiRz9auY1kx/AyZeITQnx8i3wZkA4oy
+tr06lhXDzJBhbUcvnG/DasXz2NL6Es6Kwer5++fj8JL5NsxWPIsNrANZMVg9
+rz9fPt+G3p8XsB1gxlYtIxkyNtkEzC7XUPoH2K0RmA==
+    "], {{0, 105}, {112, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{112, 105},
+  PlotRange->{{0, 112}, {0, 105}}]], "Output",
+ ImageSize->{116, 105},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[35]//TraditionalForm=",
+ CellID->36595538]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["XXXX"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->2058623809],
+
+Cell[BoxData["XXXX"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->1181321046]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Using EconMult - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 59, 23.3801660}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Econ Mult Tutorial", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "EconMult set up. The following are given values though executing \
+EMsetup: Setting up a model with two targetet species ({1,2} and 3) where the \
+first is defined by two biomass units (1 and 2) while the second is defined \
+by one biomass unit (3). The setup also includes two fleet groups and four \
+time steps per year (quarters).", "synonyms" -> {}, "title" -> 
+    "Using EconMult", "type" -> "Tutorial", "uri" -> 
+    "EconMult/tutorial/UsingEconMult"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[607, 21, 78, 1, 70, "TutorialColorBar"],
+Cell[688, 24, 179, 5, 70, "LinkTrail"],
+Cell[870, 31, 3778, 78, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[4673, 113, 51, 1, 70, "Title",
+ CellID->509267359],
+Cell[4727, 116, 652, 18, 70, "DefinitionBox",
+ CellID->2096742444],
+Cell[5382, 136, 56, 1, 70, "Caption",
+ CellID->1891092685],
+Cell[5441, 139, 144, 4, 70, "Input",
+ CellID->287950534],
+Cell[CellGroupData[{
+Cell[5610, 147, 98, 3, 70, "Input",
+ CellID->378250152],
+Cell[CellGroupData[{
+Cell[5733, 154, 150, 3, 70, "Print",
+ CellID->643226538],
+Cell[5886, 159, 147, 3, 70, "Print",
+ CellID->62413908],
+Cell[6036, 164, 151, 3, 70, "Print",
+ CellID->372145285],
+Cell[6190, 169, 800, 16, 70, "Print",
+ CellID->269842569]
+}, Open  ]]
+}, Open  ]],
+Cell[7017, 189, 91, 1, 70, "Text",
+ CellID->52957391],
+Cell[CellGroupData[{
+Cell[7133, 194, 77, 2, 70, "Input",
+ CellID->28105237],
+Cell[7213, 198, 214, 7, 36, "Output",
+ CellID->647402908]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7464, 210, 77, 2, 70, "Input",
+ CellID->785028716],
+Cell[7544, 214, 266, 9, 36, "Output",
+ CellID->54508791]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7847, 228, 80, 2, 70, "Input",
+ CellID->184118582],
+Cell[7930, 232, 159, 5, 36, "Output",
+ CellID->220291808]
+}, Open  ]],
+Cell[8104, 240, 301, 6, 70, "Text",
+ CellID->302327231],
+Cell[CellGroupData[{
+Cell[8430, 250, 242, 9, 70, "Input",
+ CellID->531538698],
+Cell[8675, 261, 807, 16, 70, "Print",
+ CellID->957230519]
+}, Open  ]],
+Cell[9497, 280, 2894, 84, 70, "DefinitionBox",
+ CellID->268711031],
+Cell[12394, 366, 56, 1, 70, "Caption",
+ CellID->102330857],
+Cell[CellGroupData[{
+Cell[12475, 371, 110, 3, 70, "Input",
+ CellID->49146945],
+Cell[12588, 376, 993, 20, 88, "Output",
+ CellID->227225249]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13618, 401, 113, 3, 70, "Input",
+ CellID->23327585],
+Cell[13734, 406, 4364, 114, 124, "Output",
+ CellID->71468520]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18135, 525, 169, 5, 28, "Input",
+ CellID->364081538],
+Cell[18307, 532, 5983, 105, 188, "Output",
+ CellID->220894907]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24327, 642, 141, 4, 70, "Input",
+ CellID->74801411],
+Cell[24471, 648, 1008, 32, 83, "Output",
+ CellID->331006439]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25516, 685, 144, 4, 28, "Input",
+ CellID->232499722],
+Cell[25663, 691, 2322, 45, 140, "Output",
+ CellID->36595538]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28022, 741, 74, 2, 70, "Input",
+ CellID->2058623809],
+Cell[28099, 745, 162, 5, 36, "Output",
+ CellID->1181321046]
+}, Open  ]]
+}, Open  ]],
+Cell[28288, 754, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
