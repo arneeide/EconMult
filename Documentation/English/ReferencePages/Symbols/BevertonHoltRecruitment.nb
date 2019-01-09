@@ -1,0 +1,540 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     17423,        530]
+NotebookOptionsPosition[     14198,        425]
+NotebookOutlinePosition[     15827,        471]
+CellTagsIndexPosition[     15742,        466]
+WindowTitle->BevertonHoltRecruitment - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"RickerRecruitment\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/RickerRecruitment"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EconMult/ref/BevertonHoltRecruitment\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/ref/BevertonHoltRecruitment"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/ref/\
+BevertonHoltRecruitment.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/ref/BevertonHoltRecruitment", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["BevertonHoltRecruitment", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["BevertonHoltRecruitment"], "InlineFormula"],
+     " \[LineSeparator]is an optional value of RecruitmentFunction in the \
+function Recruitment."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->217153266],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->291852544],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->167385440],
+
+Cell["\<\
+RecruitmentFunction may be given the value BevertonHoltRecruitment, employing \
+the Beverton and Holt recruitment function\
+\>", "ExampleText",
+ CellID->450119176],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"Recruitment", "[", 
+   RowBox[{"S", ",", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->154968745],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"S", " ", 
+     SubscriptBox["\<\"R\"\>", "\<\"max\"\>"]}], 
+    RowBox[{
+     FractionBox[
+      SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"], "2"], "+", "S"}]],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{49, 46},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->109507202]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Recruitment", "[", 
+    RowBox[{"S", ",", 
+     RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}], 
+     ",", 
+     RowBox[{"MaximumRecruitmentBiomass", "\[Rule]", "20"}], ",", 
+     RowBox[{"MaximumRecruitment", "\[Rule]", "10"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"S", ",", "0", ",", "70"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->500401537],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1: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
+/j/9vPQN
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 70}, {0., 8.749999977678572}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{184, 121},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->318343464]
+}, Open  ]],
+
+Cell[TextData[{
+ "The option Recruits is displaced when RecruitmentFunction is given a value \
+differnt from ",
+ Cell[BoxData[
+  ButtonBox["ConstantRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/ConstantRecruitment"]], "InlineFormula"]
+}], "ExampleText",
+ CellID->246177371],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PopulationGrowth", "[", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"Recruits", "\[Rule]", "1000"}]}], "]"}], "//", 
+  "Notation"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->32635486],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"1000", " ", 
+     SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"\[ImaginaryI]", " ", "\[Pi]", " ", "\<\"b\"\>"}]}], "+", 
+       RowBox[{"\<\"F\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], "+", 
+       RowBox[{"\<\"M\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\[Infinity]"]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"], "-", 
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\"c\""]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"]}], ")"}]}], "\<\"k\"\>"],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{399, 44},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->332029378]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PopulationGrowth", "[", 
+   RowBox[{
+    RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}], 
+    ",", 
+    RowBox[{"Recruits", "\[Rule]", "1000"}]}], "]"}], "//", 
+  "Notation"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->691349659],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"\<\"S\"\>", " ", 
+     SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+     SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"\[ImaginaryI]", " ", "\[Pi]", " ", "\<\"b\"\>"}]}], "+", 
+       RowBox[{"\<\"F\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], "+", 
+       RowBox[{"\<\"M\"\>", " ", 
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\[Infinity]"]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"], "-", 
+       TemplateBox[{SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\"k\"", " ", 
+            SubscriptBox["\"t\"", "\"c\""]}]],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"\"F\"", "+", 
+              RowBox[{"\"b\"", " ", "\"k\""}], "+", "\"M\""}], "\"k\""]}],
+         RowBox[{"\"b\"", "+", "1"}]},
+        "Beta3"]}], ")"}]}], 
+    RowBox[{"\<\"k\"\>", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"], "2"], "+", "\<\"S\"\>"}], 
+      ")"}]}]],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{406, 56},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]//TraditionalForm=",
+ CellID->42825715]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["RickerRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/RickerRecruitment"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["ConstantRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/ConstantRecruitment"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->196340],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["Recruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/Recruitment"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->184450967],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["Recruits",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/Recruits"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->572170807]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"BevertonHoltRecruitment - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 48, 5.5673973}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "BevertonHoltRecruitment is an optional value of RecruitmentFunction in \
+the function Recruitment.", "synonyms" -> {}, "title" -> 
+    "BevertonHoltRecruitment", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/BevertonHoltRecruitment"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3782, 108, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->217153266]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 15599, 459}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[616, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[695, 24, 179, 5, 70, "LinkTrail"],
+Cell[877, 31, 2383, 54, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3285, 89, 66, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3354, 92, 391, 11, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3782, 108, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->217153266],
+Cell[CellGroupData[{
+Cell[4268, 125, 148, 5, 70, "ExampleSection",
+ CellID->291852544],
+Cell[4419, 132, 155, 5, 70, "Input",
+ CellID->167385440],
+Cell[4577, 139, 173, 4, 70, "ExampleText",
+ CellID->450119176],
+Cell[CellGroupData[{
+Cell[4775, 147, 236, 7, 70, "Input",
+ CellID->154968745],
+Cell[5014, 156, 450, 15, 81, "Output",
+ CellID->109507202]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5501, 176, 452, 12, 70, "Input",
+ CellID->500401537],
+Cell[5956, 190, 2743, 54, 142, "Output",
+ CellID->318343464]
+}, Open  ]],
+Cell[8714, 247, 299, 8, 70, "ExampleText",
+ CellID->246177371],
+Cell[CellGroupData[{
+Cell[9038, 259, 250, 8, 70, "Input",
+ CellID->32635486],
+Cell[9291, 269, 1443, 38, 79, "Output",
+ CellID->332029378]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10771, 312, 337, 10, 70, "Input",
+ CellID->691349659],
+Cell[11111, 324, 1664, 45, 91, "Output",
+ CellID->42825715]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12836, 376, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[13256, 390, 227, 6, 70, "SeeAlso",
+ CellID->929782353],
+Cell[13486, 398, 232, 6, 70, "ExampleText",
+ CellID->196340],
+Cell[13721, 406, 219, 6, 70, "ExampleText",
+ CellID->184450967],
+Cell[13943, 414, 213, 6, 70, "ExampleText",
+ CellID->572170807]
+}, Open  ]],
+Cell[14171, 423, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

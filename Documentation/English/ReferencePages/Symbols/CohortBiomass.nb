@@ -1,0 +1,492 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15593,        482]
+NotebookOptionsPosition[     12475,        378]
+NotebookOutlinePosition[     14044,        423]
+CellTagsIndexPosition[     13959,        418]
+WindowTitle->CohortBiomass - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/CohortBiomass\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/CohortBiomass"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+CohortBiomass.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/CohortBiomass", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["CohortBiomass", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"CohortBiomass", "[", "t", "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives total biomass of a cohort (yearclass) at age t."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->2240559],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->755058536],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->22665724],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"CohortBiomass", "[", "t", "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->376914266],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"R\"\>", " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\<\"k\"\>"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"t", "-", 
+           SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}], ")"}], "\<\"b\"\>"], 
+    " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}], ")"}]}], " ", 
+      RowBox[{"(", 
+       RowBox[{"t", "-", 
+        SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}], ")"}]}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{183, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->103936960]
+}, Open  ]],
+
+Cell[TextData[{
+ "The biomass at age zero and Initial Age (",
+ Cell[BoxData[
+  SubscriptBox["t", "c"]], "InlineFormula"],
+ ") equal zero should be zero:"
+}], "ExampleText",
+ CellID->262479801],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CohortBiomass", "[", 
+  RowBox[{"0", ",", 
+   RowBox[{"InitialAge", "\[Rule]", "0"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->146585054],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["0", "PGb"], " ", 
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"PGF", "+", "PGM"}], ")"}], " ", "PGtR"}]], " ", "PGR", " ", 
+  "PGW8"}]], "Output",
+ ImageSize->{160, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->198820505]
+}, Open  ]],
+
+Cell[TextData[{
+ "which is found by applying ",
+ Cell[BoxData[
+  ButtonBox["SimplifyNotation",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/SimplifyNotation"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->291146772],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"CohortBiomass", "[", 
+   RowBox[{"0", ",", 
+    RowBox[{"InitialAge", "\[Rule]", "0"}]}], "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->9400759],
+
+Cell[BoxData[
+ FormBox[
+  TagBox["0",
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{10, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->10793708]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"CohortBiomass", "[", "\[IndentingNewLine]", 
+    RowBox[{"t", ",", "\[IndentingNewLine]", 
+     RowBox[{"InitialAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"GrowthRate", "\[Rule]", ".35"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Recruits", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Fishing", "\[Rule]", "False"}]}], "\[IndentingNewLine]", "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "30"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->210712973],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 113}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 113},
+  PlotRange->{{0, 180}, {0, 113}}]], "Output",
+ ImageSize->{184, 113},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->18258347]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Neat Examples",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740],
+
+Cell[TextData[{
+ "An interesting connection between CohortBiomass, ",
+ Cell[BoxData[
+  ButtonBox["IndividualWeight",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/IndividualWeight"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["IndividNumbers",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/IndividNumbers"]], "InlineFormula"],
+ " is confirmed by the following:"
+}], "ExampleText",
+ CellID->621032190],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"CohortBiomass", "'"}], "[", "t", "]"}], 
+    RowBox[{"CohortBiomass", "[", "t", "]"}]], "==", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"IndividualWeight", "'"}], "[", "t", "]"}], 
+     RowBox[{"IndividualWeight", "[", "t", "]"}]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"IndividNumbers", "'"}], "[", "t", "]"}], 
+     RowBox[{"IndividNumbers", "[", "t", "]"}]]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->467658384],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->342010474]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"CohortBiomass - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 48, 46.4777373}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "CohortBiomass[t] gives total biomass of a cohort (yearclass) at age t.", 
+    "synonyms" -> {}, "title" -> "CohortBiomass", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/CohortBiomass"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3258, 96, 459, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->2240559]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13819, 411}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[606, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[685, 24, 179, 5, 70, "LinkTrail"],
+Cell[867, 31, 1878, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2770, 77, 56, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2829, 80, 392, 11, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3258, 96, 459, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->2240559],
+Cell[CellGroupData[{
+Cell[3742, 113, 148, 5, 70, "ExampleSection",
+ CellID->755058536],
+Cell[3893, 120, 154, 5, 70, "Input",
+ CellID->22665724],
+Cell[CellGroupData[{
+Cell[4072, 129, 139, 4, 70, "Input",
+ CellID->376914266],
+Cell[4214, 135, 920, 29, 54, "Output",
+ CellID->103936960]
+}, Open  ]],
+Cell[5149, 167, 192, 6, 70, "ExampleText",
+ CellID->262479801],
+Cell[CellGroupData[{
+Cell[5366, 177, 171, 5, 70, "Input",
+ CellID->146585054],
+Cell[5540, 184, 355, 12, 36, "Output",
+ CellID->198820505]
+}, Open  ]],
+Cell[5910, 199, 235, 8, 70, "ExampleText",
+ CellID->291146772],
+Cell[CellGroupData[{
+Cell[6170, 211, 209, 6, 70, "Input",
+ CellID->9400759],
+Cell[6382, 219, 267, 9, 50, "Output",
+ CellID->10793708]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6686, 233, 977, 19, 263, "Input",
+ CellID->210712973],
+Cell[7666, 254, 3288, 61, 134, "Output",
+ CellID->18258347]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11003, 321, 228, 7, 70, "ExampleSection",
+ CellID->589267740],
+Cell[11234, 330, 437, 13, 70, "ExampleText",
+ CellID->621032190],
+Cell[CellGroupData[{
+Cell[11696, 347, 549, 17, 70, "Input",
+ CellID->467658384],
+Cell[12248, 366, 161, 5, 36, "Output",
+ CellID->342010474]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[12448, 376, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

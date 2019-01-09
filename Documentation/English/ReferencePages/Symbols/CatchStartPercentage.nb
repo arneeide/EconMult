@@ -1,0 +1,518 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19517,        508]
+NotebookOptionsPosition[     16655,        417]
+NotebookOutlinePosition[     18333,        463]
+CellTagsIndexPosition[     18248,        458]
+WindowTitle->CatchStartPercentage - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"FirstCatchAge\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/FirstCatchAge"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EconMult/ref/CatchStartPercentage\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/ref/CatchStartPercentage"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/ref/\
+CatchStartPercentage.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/ref/CatchStartPercentage", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["CatchStartPercentage", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"CatchStartPercentage", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]is an option of CatchSelectionFunction with default \
+value 0.1. CatchStartPercentage gives the percentage caught at age \
+FirstCatchAge."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->365799094],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->57328461],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->144153621],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"CatchSelectionFunction", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"CatchSelection", "\[Rule]", "Logistic"}]}], "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->787731532],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"1", "-", 
+    FractionBox["1", 
+     RowBox[{
+      SuperscriptBox["0.11111111111111112`", 
+       FractionBox[
+        RowBox[{"t", "-", 
+         SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], 
+        RowBox[{
+         SubscriptBox["\<\"t\"\>", "\<\"cs\"\>"], "-", 
+         SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}]]], "+", "1"}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{123, 47},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->635234909]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"CatchSelectionFunction", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"CatchSelection", "\[Rule]", "Logistic"}], ",", 
+    RowBox[{"CatchStartPercentage", "\[Rule]", ".001"}]}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->76524549],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"1", "-", 
+    FractionBox["1", 
+     RowBox[{
+      SuperscriptBox["0.0010010010010010012`", 
+       FractionBox[
+        RowBox[{"t", "-", 
+         SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], 
+        RowBox[{
+         SubscriptBox["\<\"t\"\>", "\<\"cs\"\>"], "-", 
+         SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}]]], "+", "1"}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{123, 47},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->255970592]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "@", 
+  RowBox[{"Partition", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"CatchSelectionFunction", "[", 
+         RowBox[{"t", ",", 
+          RowBox[{"CatchSelection", "\[Rule]", "Logistic"}], ",", 
+          RowBox[{"CatchAge", "\[Rule]", "5"}], ",", 
+          RowBox[{"FirstCatchAge", "\[Rule]", "3"}], ",", 
+          RowBox[{"CatchStartPercentage", "\[Rule]", "i"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "10"}], "}"}], ",", 
+        RowBox[{"AxesOrigin", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", ".1", ",", ".4", ",", ".1"}], "}"}]}], "]"}], ",", 
+    "2"}], "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->371986389],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 255}, {368, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{368, 255},
+  PlotRange->{{0, 368}, {0, 255}}]], "Output",
+ ImageSize->{372, 255},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->7659646]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["CatchSelectionFunction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/CatchSelectionFunction"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->842650969],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["FirstCatchAge",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/FirstCatchAge"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"CatchStartPercentage - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 48, 43.7055787}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "CatchStartPercentage[] is an option of CatchSelectionFunction with \
+default value 0.1. CatchStartPercentage gives the percentage caught at age \
+FirstCatchAge.", "synonyms" -> {}, "title" -> "CatchStartPercentage", "type" -> 
+    "Symbol", "uri" -> "EconMult/ref/CatchStartPercentage"}, "LinkTrails" -> 
+  "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3829, 109, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->365799094]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 18105, 451}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[613, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[692, 24, 179, 5, 70, "LinkTrail"],
+Cell[874, 31, 2349, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3248, 88, 63, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3314, 91, 478, 13, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3829, 109, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->365799094],
+Cell[CellGroupData[{
+Cell[4315, 126, 147, 5, 70, "ExampleSection",
+ CellID->57328461],
+Cell[4465, 133, 155, 5, 70, "Input",
+ CellID->144153621],
+Cell[CellGroupData[{
+Cell[4645, 142, 223, 6, 70, "Input",
+ CellID->787731532],
+Cell[4871, 150, 609, 19, 82, "Output",
+ CellID->635234909]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5517, 174, 285, 7, 70, "Input",
+ CellID->76524549],
+Cell[5805, 183, 611, 19, 82, "Output",
+ CellID->255970592]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6453, 207, 981, 26, 83, "Input",
+ CellID->371986389],
+Cell[7437, 235, 8232, 142, 276, "Output",
+ CellID->7659646]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15730, 384, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[16150, 398, 241, 6, 70, "ExampleText",
+ CellID->842650969],
+Cell[16394, 406, 219, 6, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[16628, 415, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

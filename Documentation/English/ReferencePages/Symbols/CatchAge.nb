@@ -1,0 +1,461 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     17515,        451]
+NotebookOptionsPosition[     14877,        368]
+NotebookOutlinePosition[     16511,        414]
+CellTagsIndexPosition[     16426,        409]
+WindowTitle->CatchAge - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/CatchAge\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/CatchAge"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+CatchAge.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+           Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/CatchAge", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["CatchAge", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["CatchAge"], "InlineFormula"],
+     " \[LineSeparator]CatchAge is an option for PopulationGrowth, giving the \
+age of first catch in stock or 50% recruitment to catchable stock. Default \
+value PGtc."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->35863419],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->766197310],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->272567927],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["CatchAge",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/CatchAge"]], "InlineFormula"],
+ " is the age of first catch in stock or the age at which 50% of the stock is \
+exposed to fishing."
+}], "ExampleText",
+ CellID->133722631],
+
+Cell[TextData[{
+ "By default value of CatchAge is set to the generic ",
+ Cell[BoxData[
+  ButtonBox["PGtc",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/PGtc"]], "InlineFormula"],
+ ", often referred to as ",
+ Cell[BoxData[
+  SubscriptBox["t", "c"]], "InlineFormula"],
+ "."
+}], "ExampleText",
+ CellID->83596721],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["FirstCatchAge",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/FirstCatchAge"]], "InlineFormula"],
+ " (age at which ",
+ Cell[BoxData[
+  ButtonBox["CatchStartPercentage",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/CatchStartPercentage"]], "InlineFormula"],
+ " % is represented in catch) is needed if the value of CatchSelection is set \
+to Logistic"
+}], "ExampleText",
+ CellID->152728162],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"CatchSelectionFunction", "[", 
+      RowBox[{"t", ",", 
+       RowBox[{"CatchAge", "\[Rule]", "5"}], ",", 
+       RowBox[{"FirstCatchAge", "\[Rule]", "3"}], ",", 
+       RowBox[{"CatchSelection", "\[Rule]", "#"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{"Sharp", ",", "Logistic"}], "}"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->451987234],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 122}, {385, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{385, 122},
+  PlotRange->{{0, 385}, {0, 122}}]], "Output",
+ ImageSize->{389, 122},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->630316601]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"PopulationGrowth", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"FishingMortalityRate", "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"CatchSelection", "\[Rule]", "Sharp"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"CatchAge", "\[Rule]", "ca"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"GrowthRate", "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Recruits", "\[Rule]", "100"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MortalityRate", "\[Rule]", 
+      RowBox[{"1", "/", "2"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"InitialAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"BiomassIncluded", "\[Rule]", "Fishable"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Fishing", "\[Rule]", "True"}]}], "\[IndentingNewLine]", "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"ca", ",", "0", ",", "10"}], "}"}], ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<catch age\>\"", ",", "\"\<total catch\>\""}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->120321783],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 124}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 124},
+  PlotRange->{{0, 180}, {0, 124}}]], "Output",
+ ImageSize->{184, 124},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->430090435]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"CatchAge - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 48, 31.2708675}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "CatchAge CatchAge is an option for PopulationGrowth, giving the age of \
+first catch in stock or 50% recruitment to catchable stock. Default value \
+PGtc.", "synonyms" -> {}, "title" -> "CatchAge", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/CatchAge"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3281, 97, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->35863419]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 16285, 402}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[680, 24, 179, 5, 70, "LinkTrail"],
+Cell[862, 31, 1856, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2743, 77, 51, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2797, 80, 447, 12, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3281, 97, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->35863419],
+Cell[CellGroupData[{
+Cell[3766, 114, 148, 5, 70, "ExampleSection",
+ CellID->766197310],
+Cell[3917, 121, 134, 3, 70, "Input",
+ CellID->272567927],
+Cell[4054, 126, 283, 8, 70, "ExampleText",
+ CellID->133722631],
+Cell[4340, 136, 322, 11, 70, "ExampleText",
+ CellID->83596721],
+Cell[4665, 149, 457, 13, 70, "ExampleText",
+ CellID->152728162],
+Cell[CellGroupData[{
+Cell[5147, 166, 523, 15, 47, "Input",
+ CellID->451987234],
+Cell[5673, 183, 4196, 76, 143, "Output",
+ CellID->630316601]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9906, 264, 1556, 33, 281, "Input",
+ CellID->120321783],
+Cell[11465, 299, 3346, 62, 145, "Output",
+ CellID->430090435]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[14850, 366, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
