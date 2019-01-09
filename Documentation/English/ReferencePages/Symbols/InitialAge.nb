@@ -1,0 +1,456 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13701,        446]
+NotebookOptionsPosition[     10959,        357]
+NotebookOutlinePosition[     12601,        403]
+CellTagsIndexPosition[     12516,        398]
+WindowTitle->InitialAge - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/InitialAge\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/InitialAge"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+InitialAge.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/InitialAge", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["InitialAge", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["InitialAge"], "InlineFormula"],
+     " \[LineSeparator]is an option in PopulationGrowth which is the \
+theoretical age of individual weight equal zero, often referred to as ",
+     Cell[BoxData[
+      SubscriptBox["t", "0"]], "InlineFormula"],
+     ". Default value PGt0."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->334692846],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->2089300],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->162506465],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"IndividualWeight", "[", "t", "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->727048577],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\<\"k\"\>"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"t", "-", 
+           SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}], ")"}], "\<\"b\"\>"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{105, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->220306591]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"IndividualWeight", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"InitialAge", "\[Rule]", "0"}]}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->21609564],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\<\"k\"\>"}], " ", "t"}]]}], ")"}], "\<\"b\"\>"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{84, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->9994522]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"PopulationBiomass", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->5699255],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    RowBox[{"-", "\<\"R\"\>"}], " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\<\"M\"\>", " ", 
+      SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"3", " ", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\<\"k\"\>", " ", 
+           SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"t", " ", 
+             RowBox[{"(", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}]}], ")"}]}]], 
+           "-", "1"}], ")"}]}], 
+        RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"2", " ", "\<\"k\"\>", " ", 
+          SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"t", " ", 
+            RowBox[{"(", 
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}]}], 
+             ")"}]}]], "-", "1"}], ")"}]}], 
+       RowBox[{
+        RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"3", " ", "\<\"k\"\>", " ", 
+          SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"t", " ", 
+            RowBox[{"(", 
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}]}], 
+             ")"}]}]], "-", "1"}], ")"}]}], 
+       RowBox[{
+        RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"-", "\<\"M\"\>"}], " ", "t"}]], "-", "1"}], "\<\"M\"\>"]}],
+      ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{549, 41},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->156465715]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"PopulationBiomass", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "False"}], ",", 
+    RowBox[{"InitialAge", "\[Rule]", "0"}]}], "]"}]}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->532687015],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    RowBox[{"-", "\<\"R\"\>"}], " ", 
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"3", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"t", " ", 
+             RowBox[{"(", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}]}], ")"}]}]], 
+           "-", "1"}], ")"}]}], 
+        RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"t", " ", 
+            RowBox[{"(", 
+             RowBox[{"-", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}]}], 
+             ")"}]}]], "-", "1"}], ")"}]}], 
+       RowBox[{
+        RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"t", " ", 
+          RowBox[{"(", 
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], ")"}]}], 
+           ")"}]}]], "-", "1"}], 
+       RowBox[{
+        RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"-", "\<\"M\"\>"}], " ", "t"}]], "-", "1"}], "\<\"M\"\>"]}],
+      ")"}], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\<\"M\"\>", " ", 
+      SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{452, 41},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]//TraditionalForm=",
+ CellID->273841870]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"InitialAge - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 53, 29.9079485}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "InitialAge is an option in PopulationGrowth which is the theoretical age \
+of individual weight equal zero, often referred to as t_0. Default value \
+PGt0.", "synonyms" -> {}, "title" -> "InitialAge", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/InitialAge"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3368, 99, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->334692846]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 12374, 391}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[603, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[682, 24, 179, 5, 70, "LinkTrail"],
+Cell[864, 31, 1866, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2755, 77, 53, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2811, 80, 520, 14, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3368, 99, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->334692846],
+Cell[CellGroupData[{
+Cell[3854, 116, 146, 5, 70, "ExampleSection",
+ CellID->2089300],
+Cell[4003, 123, 134, 3, 70, "Input",
+ CellID->162506465],
+Cell[CellGroupData[{
+Cell[4162, 130, 142, 4, 70, "Input",
+ CellID->727048577],
+Cell[4307, 136, 627, 20, 54, "Output",
+ CellID->220306591]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4971, 161, 205, 6, 70, "Input",
+ CellID->21609564],
+Cell[5179, 169, 524, 17, 54, "Output",
+ CellID->9994522]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5740, 191, 266, 7, 70, "Input",
+ CellID->5699255],
+Cell[6009, 200, 2502, 73, 76, "Output",
+ CellID->156465715]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8548, 278, 318, 8, 70, "Input",
+ CellID->532687015],
+Cell[8869, 288, 2024, 62, 76, "Output",
+ CellID->273841870]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[10932, 355, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

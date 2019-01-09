@@ -1,0 +1,691 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     20302,        681]
+NotebookOptionsPosition[     16136,        542]
+NotebookOutlinePosition[     17761,        588]
+CellTagsIndexPosition[     17676,        583]
+WindowTitle->IndividualWeight - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/IndividualWeight\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/IndividualWeight"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+IndividualWeight.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/IndividualWeight", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["IndividualWeight", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"IndividualWeight", "[", "t", "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives the individual weight at time t according to the \
+basic von Bertalanffy growth equation."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->289740802],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->371343997],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->162506465],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"IndividualWeight", "[", "t", "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->727048577],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\<\"k\"\>"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"t", "-", 
+           SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}], ")"}], "\<\"b\"\>"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{105, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->167230068]
+}, Open  ]],
+
+Cell[TextData[{
+ "By default the weight is expresse by using the constant ",
+ Cell[BoxData[
+  ButtonBox["MaxWeight",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/MaxWeight"]], "InlineFormula"],
+ " (",
+ Cell[BoxData[
+  SubscriptBox["W", "\[Infinity]"]], "InlineFormula"],
+ "), but it may also be expressed by ",
+ Cell[BoxData[
+  ButtonBox["MaxLength",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/MaxLength"]], "InlineFormula"],
+ " (",
+ Cell[BoxData[
+  SubscriptBox["L", "\[Infinity]"]], "InlineFormula"],
+ ") by setting the ",
+ Cell[BoxData[
+  ButtonBox["UseWeight",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/UseWeight"]], "InlineFormula"],
+ " option to False:"
+}], "ExampleText",
+ CellID->70456427],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"IndividualWeight", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"UseWeight", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->148931566],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"d\"\>", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\<\"L\"\>", "\[Infinity]"], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\<\"k\"\>"}], " ", 
+           RowBox[{"(", 
+            RowBox[{"t", "-", 
+             SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}], ")"}]}], 
+      ")"}], "\<\"b\"\>"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{117, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->183949841]
+}, Open  ]],
+
+Cell["A graphical example:", "ExampleText",
+ CellID->542784821],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"IndividualWeight", "[", 
+    RowBox[{"t", ",", 
+     RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+     RowBox[{"WeightLengthRelation", "\[Rule]", "2.7"}], ",", 
+     RowBox[{"GrowthRate", "\[Rule]", ".5"}], ",", 
+     RowBox[{"Recruits", "\[Rule]", "1"}], ",", 
+     RowBox[{"MaxWeight", "\[Rule]", "10"}], ",", 
+     RowBox[{"MortalityRate", "\[Rule]", ".2"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->64602269],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 123}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 123},
+  PlotRange->{{0, 180}, {0, 123}}]], "Output",
+ ImageSize->{184, 123},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->57241081]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Options",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(8)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2061341341],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "MortalityRate",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->11345067],
+
+Cell[TextData[{
+ "By default ",
+ Cell[BoxData[
+  ButtonBox["MortalityRate",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/MortalityRate"]], "InlineFormula"],
+ " is set to the generic ",
+ Cell[BoxData[
+  ButtonBox["PGM",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/PGM"]], "InlineFormula"],
+ ", in the literature often referred to by the symbol M."
+}], "ExampleText",
+ CellID->12649910]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "InitialAge",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->149355832],
+
+Cell[TextData[{
+ "By default ",
+ Cell[BoxData[
+  ButtonBox["InitialAge",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/InitialAge"]], "InlineFormula"],
+ " is set to the generic ",
+ Cell[BoxData[
+  ButtonBox["PGt0",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/PGt0"]], "InlineFormula"],
+ ", often referred to as ",
+ Cell[BoxData[
+  SubscriptBox["t", "0"]], "InlineFormula"],
+ ". InitialAge is the theoretical age of ",
+ Cell[BoxData[
+  ButtonBox["IndividualWeight",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/IndividualWeight"]], "InlineFormula"],
+ " equal zero. "
+}], "ExampleText",
+ CellID->350065084]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "MaxWeight",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->551720061],
+
+Cell[TextData[{
+ "By default ",
+ ButtonBox["MaxWeight",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/MaxWeight"],
+ " is set to the generic ",
+ ButtonBox["PGW8",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGW8"],
+ ".  Theoretical maximal individual weight, often referred to as ",
+ Cell[BoxData[
+  SubscriptBox["w", "\[Infinity]"]], "InlineFormula"],
+ " or  ",
+ Cell[BoxData[
+  SubscriptBox["W", "\[Infinity]"]], "InlineFormula"],
+ "."
+}], "ExampleText",
+ CellID->321305219]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "MaxLength",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->341800245],
+
+Cell[TextData[{
+ "By default ",
+ ButtonBox["MaxLength",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/MaxLength"],
+ " is set to the generic ",
+ ButtonBox["PGL8",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGL8"],
+ ". Theoretical maximal individual length, often referred to as ",
+ Cell[BoxData[
+  SubscriptBox["l", "\[Infinity]"]], "InlineFormula"],
+ " or  ",
+ Cell[BoxData[
+  SubscriptBox["L", "\[Infinity]"]], "InlineFormula"],
+ "."
+}], "ExampleText",
+ CellID->244813740]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "GrowthRate",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->286954823],
+
+Cell[TextData[{
+ "By default ",
+ ButtonBox["GrowthRate",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/GrowthRate"],
+ ButtonBox[" ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/WeightLengthParameter"],
+ "is dynamically set to the generic ",
+ ButtonBox["PGkk",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGkk"]
+}], "ExampleText",
+ CellID->197623657]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Recruits",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->209030249],
+
+Cell[TextData[{
+ "By default ",
+ ButtonBox["Recruits",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/Recruits"],
+ " is dynamically set to the generic ",
+ ButtonBox["PGR.",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGR"]
+}], "ExampleText",
+ CellID->232362191]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "WeightLengthRelation",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->27275316],
+
+Cell[TextData[{
+ "By default ",
+ ButtonBox["WeightLengthRelation",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/WeightLengthRelation"],
+ " is set to the generic ",
+ ButtonBox["PGb",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGb"]
+}], "ExampleText",
+ CellID->365160919]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "WeightLengthParameter",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->627891208],
+
+Cell[TextData[{
+ "By default ",
+ ButtonBox["WeightLengthParameter",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/WeightLengthParameter"],
+ " is set to the generic ",
+ ButtonBox["PGd ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGd"],
+ "and is only included when ",
+ Cell[BoxData[
+  ButtonBox["UseWeight",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/UseWeight"]], "InlineFormula"],
+ " is set to False."
+}], "ExampleText",
+ CellID->944233520]
+}, Closed]]
+}, Closed]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"IndividualWeight - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 53, 26.6727635}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "IndividualWeight[t] gives the individual weight at time t according to \
+the basic von Bertalanffy growth equation.", "synonyms" -> {}, "title" -> 
+    "IndividualWeight", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/IndividualWeight"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3321, 97, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->289740802]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 17534, 576}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[609, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[688, 24, 179, 5, 70, "LinkTrail"],
+Cell[870, 31, 1890, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2785, 77, 59, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2847, 80, 437, 12, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3321, 97, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->289740802],
+Cell[CellGroupData[{
+Cell[3807, 114, 148, 5, 70, "ExampleSection",
+ CellID->371343997],
+Cell[3958, 121, 134, 3, 70, "Input",
+ CellID->162506465],
+Cell[CellGroupData[{
+Cell[4117, 128, 142, 4, 70, "Input",
+ CellID->727048577],
+Cell[4262, 134, 627, 20, 54, "Output",
+ CellID->167230068]
+}, Open  ]],
+Cell[4904, 157, 741, 24, 70, "ExampleText",
+ CellID->70456427],
+Cell[CellGroupData[{
+Cell[5670, 185, 209, 6, 70, "Input",
+ CellID->148931566],
+Cell[5882, 193, 714, 23, 54, "Output",
+ CellID->183949841]
+}, Open  ]],
+Cell[6611, 219, 63, 1, 70, "ExampleText",
+ CellID->542784821],
+Cell[CellGroupData[{
+Cell[6699, 224, 585, 14, 65, "Input",
+ CellID->64602269],
+Cell[7287, 240, 2853, 54, 144, "Output",
+ CellID->57241081]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10189, 300, 223, 7, 70, "ExampleSection",
+ CellID->2061341341],
+Cell[CellGroupData[{
+Cell[10437, 311, 233, 7, 70, "ExampleSubsection",
+ CellID->11345067],
+Cell[10673, 320, 411, 13, 70, "ExampleText",
+ CellID->12649910]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[11121, 338, 231, 7, 70, "ExampleSubsection",
+ CellID->149355832],
+Cell[11355, 347, 643, 21, 70, "ExampleText",
+ CellID->350065084]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[12035, 373, 230, 7, 70, "ExampleSubsection",
+ CellID->551720061],
+Cell[12268, 382, 497, 17, 70, "ExampleText",
+ CellID->321305219]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[12802, 404, 230, 7, 70, "ExampleSubsection",
+ CellID->341800245],
+Cell[13035, 413, 496, 17, 70, "ExampleText",
+ CellID->244813740]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[13568, 435, 231, 7, 70, "ExampleSubsection",
+ CellID->286954823],
+Cell[13802, 444, 383, 13, 70, "ExampleText",
+ CellID->197623657]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14222, 462, 229, 7, 70, "ExampleSubsection",
+ CellID->209030249],
+Cell[14454, 471, 282, 10, 70, "ExampleText",
+ CellID->232362191]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14773, 486, 240, 7, 70, "ExampleSubsection",
+ CellID->27275316],
+Cell[15016, 495, 293, 10, 70, "ExampleText",
+ CellID->365160919]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[15346, 510, 242, 7, 70, "ExampleSubsection",
+ CellID->627891208],
+Cell[15591, 519, 479, 16, 70, "ExampleText",
+ CellID->944233520]
+}, Closed]]
+}, Closed]]
+}, Open  ]],
+Cell[16109, 540, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

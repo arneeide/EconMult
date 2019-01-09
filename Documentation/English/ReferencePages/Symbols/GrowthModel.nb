@@ -1,0 +1,473 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15012,        463]
+NotebookOptionsPosition[     12017,        363]
+NotebookOutlinePosition[     13589,        408]
+CellTagsIndexPosition[     13504,        403]
+WindowTitle->GrowthModel - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"SurplusProduction\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/SurplusProduction"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EconMult/ref/GrowthModel\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/ref/GrowthModel"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/ref/\
+GrowthModel.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/ref/GrowthModel", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["GrowthModel", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["GrowthModel"], "InlineFormula"],
+     "\[LineSeparator]is an option of SurplusProduction with default value \
+VerhulstSchaefer."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->3333108],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->114457209],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->786480055],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"SurplusProduction", "[", 
+   RowBox[{"UseMSY", "\[Rule]", "False"}], "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->163263369],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"r\"\>", " ", "\<\"X\"\>", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      FractionBox["\<\"X\"\>", "\<\"K\"\>"]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{65, 33},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->145373335]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"SurplusProduction", "[", 
+   RowBox[{
+    RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+    RowBox[{"GrowthModel", "\[Rule]", "GompertzFox"}]}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->402598913],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    RowBox[{"-", "\<\"r\"\>"}], " ", "\<\"X\"\>", " ", 
+    RowBox[{"log", "(", 
+     FractionBox["\<\"X\"\>", "\<\"K\"\>"], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{68, 33},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->313346022]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"SurplusProduction", "[", 
+    RowBox[{
+     RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+     RowBox[{"GrowthModel", "\[Rule]", "GompertzFox"}], ",", 
+     RowBox[{"BiomassMaximum", "\[Rule]", "1000"}], ",", 
+     RowBox[{"IntrinsicGrowthRate", "\[Rule]", ".4"}], ",", 
+     RowBox[{"CurrentBiomass", "\[Rule]", "x"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1000"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->103459676],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+9xDRkKf0TbuGllPZIIk8hWEYhgmP/wFu/aun
+    "], {{0, 111}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 111},
+  PlotRange->{{0, 180}, {0, 111}}]], "Output",
+ ImageSize->{184, 111},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->568119674]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"SurplusProduction", "[", 
+   RowBox[{
+    RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+    RowBox[{"GrowthModel", "\[Rule]", "RichardsPellaTomlinson"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->21126265],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"r\"\>", " ", "\<\"X\"\>", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["\<\"X\"\>", "\<\"K\"\>"], ")"}], 
+       RowBox[{"\<\"m\"\>", "-", "1"}]]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{94, 34},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]//TraditionalForm=",
+ CellID->309994899]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"SurplusProduction", "[", 
+   RowBox[{
+    RowBox[{"UseMSY", "\[Rule]", "False"}], ",", 
+    RowBox[{"GrowthModel", "\[Rule]", "QuasiBevertonHolt"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->624724103],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"r\"\>", " ", "\<\"X\"\>", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["\<\"X\"\>", "\<\"K\"\>"], ")"}], 
+       RowBox[{
+        FractionBox["\<\"b\"\>", 
+         RowBox[{"\<\"b\"\>", "+", "1"}]], "-", "1"}]]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{105, 45},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]//TraditionalForm=",
+ CellID->814298029]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["SurplusProduction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/SurplusProduction"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"GrowthModel - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 53, 3.1164162}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "GrowthModel is an option of SurplusProduction with default value \
+VerhulstSchaefer.", "synonyms" -> {}, "title" -> "GrowthModel", "type" -> 
+    "Symbol", "uri" -> "EconMult/ref/GrowthModel"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3681, 107, 459, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->3333108]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13363, 396}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[604, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[683, 24, 179, 5, 70, "LinkTrail"],
+Cell[865, 31, 2321, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3211, 88, 54, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3268, 91, 376, 11, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3681, 107, 459, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->3333108],
+Cell[CellGroupData[{
+Cell[4165, 124, 148, 5, 70, "ExampleSection",
+ CellID->114457209],
+Cell[4316, 131, 155, 5, 70, "Input",
+ CellID->786480055],
+Cell[CellGroupData[{
+Cell[4496, 140, 182, 5, 70, "Input",
+ CellID->163263369],
+Cell[4681, 147, 410, 13, 68, "Output",
+ CellID->145373335]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5128, 165, 258, 7, 70, "Input",
+ CellID->402598913],
+Cell[5389, 174, 410, 13, 68, "Output",
+ CellID->313346022]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5836, 192, 522, 13, 47, "Input",
+ CellID->103459676],
+Cell[6361, 207, 3212, 60, 132, "Output",
+ CellID->568119674]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9610, 272, 272, 8, 70, "Input",
+ CellID->21126265],
+Cell[9885, 282, 504, 16, 69, "Output",
+ CellID->309994899]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10426, 303, 268, 8, 70, "Input",
+ CellID->624724103],
+Cell[10697, 313, 570, 18, 80, "Output",
+ CellID->814298029]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11328, 338, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[11748, 352, 227, 6, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[11990, 361, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
