@@ -1,0 +1,866 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     30585,        856]
+NotebookOptionsPosition[     27278,        747]
+NotebookOutlinePosition[     28870,        792]
+CellTagsIndexPosition[     28785,        787]
+WindowTitle->SpawningBiomass - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"RecruitmentFunction\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/RecruitmentFunction"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EconMult/ref/SpawningBiomass\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/ref/SpawningBiomass"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/ref/\
+SpawningBiomass.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/ref/SpawningBiomass", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["SpawningBiomass", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["SpawningBiomass"], "InlineFormula"],
+     "\[LineSeparator]SpawningBiomass is an option in PopulationGrowth with \
+default value PGSB"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->348173415],
+
+Cell["\<\
+SpawningBiomass is not active when RecruitmentFunction is set to \
+ConstantRecruitment\
+\>", "Notes",
+ CellID->1067943069]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->324414017],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->10405396],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PopulationGrowth", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FirstCatchAge", "\[Rule]", "PGtR"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"BiomassIncluded", "\[Rule]", "Fishable"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->461877746],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  RowBox[{
+   FractionBox["1", "PGmRb"], 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"1", "-", 
+      FractionBox["PGSB", "PGmRb"], "+", 
+      RowBox[{"PGM", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "PGtc"}], "+", "PGtR"}], ")"}]}]}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"PGF", "+", "PGM"}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"PGkk", " ", 
+          RowBox[{"(", 
+           RowBox[{"PGt0", "-", "PGtc"}], ")"}]}]]}], 
+       RowBox[{"PGF", "+", "PGkk", "+", "PGM"}]], "-", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"2", " ", "PGkk", " ", 
+          RowBox[{"(", 
+           RowBox[{"PGt0", "-", "PGtc"}], ")"}]}]]}], 
+       RowBox[{"PGF", "+", 
+        RowBox[{"2", " ", "PGkk"}], "+", "PGM"}]], "+", 
+      FractionBox[
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"3", " ", "PGkk", " ", 
+         RowBox[{"(", 
+          RowBox[{"PGt0", "-", "PGtc"}], ")"}]}]], 
+       RowBox[{"PGF", "+", 
+        RowBox[{"3", " ", "PGkk"}], "+", "PGM"}]]}], ")"}], " ", "PGmR", " ", 
+    "PGSB", " ", "PGW8"}]}]}]], "Output",
+ ImageSize->{561, 71},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->307027010]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"PopulationGrowth", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FirstCatchAge", "\[Rule]", "PGtR"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"BiomassIncluded", "\[Rule]", "Fishable"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->112517756],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"\<\"S\"\>", " ", 
+      SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+      SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"3", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "0"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+         RowBox[{"\<\"F\"\>", "+", "\<\"k\"\>", "+", "\<\"M\"\>"}]], "-", 
+        FractionBox[
+         RowBox[{"3", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"2", " ", "\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "0"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+         RowBox[{"\<\"F\"\>", "+", 
+          RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+        FractionBox[
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"3", " ", "\<\"k\"\>", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["\<\"t\"\>", "0"], "-", 
+             SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+         RowBox[{"\<\"F\"\>", "+", 
+          RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+        FractionBox["1", 
+         RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]]}], ")"}], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"\<\"M\"\>", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+           SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}], "-", 
+        FractionBox["\<\"S\"\>", 
+         SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]], "+", "1"}]]}], 
+     SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{397, 59},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->38740309]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"PopulationGrowth", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FirstCatchAge", "\[Rule]", "PGtR"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"BiomassIncluded", "\[Rule]", "Fishable"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "BevertonHoltRecruitment"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->73203294],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"\<\"S\"\>", " ", 
+      SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+      SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\<\"M\"\>", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+          SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"3", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "0"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+         RowBox[{"\<\"F\"\>", "+", "\<\"k\"\>", "+", "\<\"M\"\>"}]], "-", 
+        FractionBox[
+         RowBox[{"3", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"2", " ", "\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "0"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+         RowBox[{"\<\"F\"\>", "+", 
+          RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+        FractionBox[
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"3", " ", "\<\"k\"\>", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["\<\"t\"\>", "0"], "-", 
+             SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+         RowBox[{"\<\"F\"\>", "+", 
+          RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+        FractionBox["1", 
+         RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]]}], ")"}]}], 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"], "2"], "+", "\<\"S\"\>"}]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{362, 62},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->110680238]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Neat Examples",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"spawningstock", "=", "\[IndentingNewLine]", 
+   RowBox[{"PopulationGrowth", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"FirstCatchAge", "\[Rule]", "PGtR"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"BiomassIncluded", "\[Rule]", "All"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->90086044],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PopulationGrowth", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FirstCatchAge", "\[Rule]", "PGtR"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"BiomassIncluded", "\[Rule]", "Fishable"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"RecruitmentFunction", "\[Rule]", "RickerRecruitment"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"SpawningBiomass", "\[Rule]", "spawningstock"}]}], 
+   "\[IndentingNewLine]", "]"}], "//", "Notation"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->254846957],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"-", 
+    RowBox[{
+     FractionBox["1", 
+      SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]], 
+     RowBox[{
+      SubscriptBox["\<\"R\"\>", "\<\"max\"\>"], " ", 
+      SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"3", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "0"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+         RowBox[{"\<\"F\"\>", "+", "\<\"k\"\>", "+", "\<\"M\"\>"}]], "-", 
+        FractionBox[
+         RowBox[{"3", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"2", " ", "\<\"k\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "0"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+         RowBox[{"\<\"F\"\>", "+", 
+          RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+        FractionBox[
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"3", " ", "\<\"k\"\>", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["\<\"t\"\>", "0"], "-", 
+             SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+         RowBox[{"\<\"F\"\>", "+", 
+          RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+        FractionBox["1", 
+         RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"\<\"R\"\>", " ", 
+          SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\<\"M\"\>", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+              SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"3", " ", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{"\<\"k\"\>", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["\<\"t\"\>", "0"], "-", 
+                  SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+             RowBox[{"\<\"F\"\>", "+", "\<\"k\"\>", "+", "\<\"M\"\>"}]], "-", 
+            FractionBox[
+             RowBox[{"3", " ", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{"2", " ", "\<\"k\"\>", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["\<\"t\"\>", "0"], "-", 
+                  SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+             RowBox[{"\<\"F\"\>", "+", 
+              RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+            FractionBox[
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"3", " ", "\<\"k\"\>", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SubscriptBox["\<\"t\"\>", "0"], "-", 
+                 SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+             RowBox[{"\<\"F\"\>", "+", 
+              RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+            FractionBox["1", 
+             RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]]}], ")"}]}]}], "-", 
+        RowBox[{"\<\"R\"\>", " ", 
+         SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\<\"M\"\>", " ", 
+           SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"3", " ", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{"\<\"k\"\>", " ", 
+                SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                SuperscriptBox["\[ExponentialE]", 
+                 RowBox[{
+                  SubscriptBox["\<\"t\"\>", "\<\"c\"\>"], " ", 
+                  RowBox[{"(", 
+                   RowBox[{"-", 
+                    RowBox[{"(", 
+                    RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}]}], 
+                   ")"}]}]], "-", "1"}], ")"}]}], 
+             RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+           FractionBox[
+            RowBox[{"3", " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"2", " ", "\<\"k\"\>", " ", 
+               SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SubscriptBox["\<\"t\"\>", "\<\"c\"\>"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{"-", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], 
+                    ")"}]}], ")"}]}]], "-", "1"}], ")"}]}], 
+            RowBox[{
+             RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"3", " ", "\<\"k\"\>", " ", 
+               SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SubscriptBox["\<\"t\"\>", "\<\"c\"\>"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{"-", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], 
+                    ")"}]}], ")"}]}]], "-", "1"}], ")"}]}], 
+            RowBox[{
+             RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "\<\"M\"\>"}], " ", 
+               SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}]], "-", 
+             "1"}], "\<\"M\"\>"]}], ")"}]}]}], ")"}], " ", 
+      RowBox[{"exp", "(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          RowBox[{"1", "/", 
+           SubscriptBox["\<\"S\"\>", "\<\"hv\"\>"]}], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"\<\"R\"\>", " ", 
+              SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{"\<\"M\"\>", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+                  SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[ExponentialE]", 
+                   RowBox[{"\<\"k\"\>", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["\<\"t\"\>", "0"], "-", 
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+                 RowBox[{"\<\"F\"\>", "+", "\<\"k\"\>", "+", "\<\"M\"\>"}]], 
+                "-", 
+                FractionBox[
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[ExponentialE]", 
+                   RowBox[{"2", " ", "\<\"k\"\>", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["\<\"t\"\>", "0"], "-", 
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]]}], 
+                 RowBox[{"\<\"F\"\>", "+", 
+                  RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+                FractionBox[
+                 SuperscriptBox["\[ExponentialE]", 
+                  RowBox[{"3", " ", "\<\"k\"\>", " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox["\<\"t\"\>", "0"], "-", 
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}]], 
+                 RowBox[{"\<\"F\"\>", "+", 
+                  RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+                FractionBox["1", 
+                 RowBox[{"\<\"F\"\>", "+", "\<\"M\"\>"}]]}], ")"}]}]}], "-", 
+            RowBox[{"\<\"R\"\>", " ", 
+             SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{"\<\"M\"\>", " ", 
+               SubscriptBox["\<\"t\"\>", "\<\"R\"\>"]}]], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", 
+                FractionBox[
+                 RowBox[{"3", " ", 
+                  SuperscriptBox["\[ExponentialE]", 
+                   RowBox[{"\<\"k\"\>", " ", 
+                    SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"-", 
+                    RowBox[{"(", 
+                    RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}], ")"}]}], 
+                    ")"}]}]], "-", "1"}], ")"}]}], 
+                 RowBox[{"\<\"k\"\>", "+", "\<\"M\"\>"}]]}], "+", 
+               FractionBox[
+                RowBox[{"3", " ", 
+                 SuperscriptBox["\[ExponentialE]", 
+                  RowBox[{"2", " ", "\<\"k\"\>", " ", 
+                   SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"-", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], 
+                    ")"}]}], ")"}]}]], "-", "1"}], ")"}]}], 
+                RowBox[{
+                 RowBox[{"2", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["\[ExponentialE]", 
+                  RowBox[{"3", " ", "\<\"k\"\>", " ", 
+                   SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    SubscriptBox["\<\"t\"\>", "\<\"c\"\>"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"-", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}], 
+                    ")"}]}], ")"}]}]], "-", "1"}], ")"}]}], 
+                RowBox[{
+                 RowBox[{"3", " ", "\<\"k\"\>"}], "+", "\<\"M\"\>"}]], "+", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["\[ExponentialE]", 
+                  RowBox[{
+                   RowBox[{"-", "\<\"M\"\>"}], " ", 
+                   SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}]], "-", 
+                 "1"}], "\<\"M\"\>"]}], ")"}]}]}], ")"}]}]}], "+", 
+        RowBox[{"\<\"M\"\>", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "-", 
+           SubscriptBox["\<\"t\"\>", "\<\"c\"\>"]}], ")"}]}], "+", "1"}], 
+       ")"}]}]}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{558, 287},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->919015319]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["RecruitmentFunction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/RecruitmentFunction"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["RickerRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/RickerRecruitment"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->19768991],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["BevertonHoltRecruitment",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/BevertonHoltRecruitment"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->815865439]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"SpawningBiomass - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 58, 5.0036831}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "SpawningBiomass SpawningBiomass is an option in PopulationGrowth with \
+default value PGSB", "synonyms" -> {}, "title" -> "SpawningBiomass", "type" -> 
+    "Symbol", "uri" -> "EconMult/ref/SpawningBiomass"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4467, 135, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->324414017]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 28642, 780}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[608, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[687, 24, 179, 5, 70, "LinkTrail"],
+Cell[869, 31, 2341, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3235, 88, 58, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3296, 91, 382, 11, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3715, 107, 580, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->348173415],
+Cell[4298, 126, 132, 4, 70, "Notes",
+ CellID->1067943069]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4467, 135, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->324414017],
+Cell[CellGroupData[{
+Cell[4953, 152, 147, 5, 70, "ExampleSection",
+ CellID->10405396],
+Cell[CellGroupData[{
+Cell[5125, 161, 568, 12, 70, "Input",
+ CellID->461877746],
+Cell[5696, 175, 1443, 44, 92, "Output",
+ CellID->307027010]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7176, 224, 607, 13, 70, "Input",
+ CellID->112517756],
+Cell[7786, 239, 2149, 56, 94, "Output",
+ CellID->38740309]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9972, 300, 612, 13, 70, "Input",
+ CellID->73203294],
+Cell[10587, 315, 2087, 55, 97, "Output",
+ CellID->110680238]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12723, 376, 228, 7, 70, "ExampleSection",
+ CellID->589267740],
+Cell[12954, 385, 552, 12, 70, "Input",
+ CellID->90086044],
+Cell[CellGroupData[{
+Cell[13531, 401, 703, 15, 70, "Input",
+ CellID->254846957],
+Cell[14237, 418, 11808, 281, 322, "Output",
+ CellID->919015319]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26106, 706, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[26526, 720, 231, 6, 70, "SeeAlso",
+ CellID->929782353],
+Cell[26760, 728, 230, 6, 70, "ExampleText",
+ CellID->19768991],
+Cell[26993, 736, 243, 6, 70, "ExampleText",
+ CellID->815865439]
+}, Open  ]],
+Cell[27251, 745, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

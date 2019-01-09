@@ -1,0 +1,865 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     30853,        855]
+NotebookOptionsPosition[     26717,        717]
+NotebookOutlinePosition[     28432,        764]
+CellTagsIndexPosition[     28347,        759]
+WindowTitle->WeightLengthRelation - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"WeightLengthParameter\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/WeightLengthParameter"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"EconMult/ref/WeightLengthRelation\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/ref/WeightLengthRelation"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/ref/\
+WeightLengthRelation.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/ref/WeightLengthRelation", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["WeightLengthRelation", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["WeightLengthRelation"], "InlineFormula"],
+     "\[LineSeparator]WeightLengthRelation gives the relation between the \
+length and volume of the fish species. Usually the value of ",
+     "WeightLengthRelation is close to 3 (cubic relationship)."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->103021432],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->68024411],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->272567927],
+
+Cell[TextData[{
+ "By default WeightLengthRelation is set to the generic ",
+ ButtonBox["PGb",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGb"],
+ ". WeightLengthRelation is defined by"
+}], "ExampleText",
+ CellID->365160919],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{
+    RowBox[{"IndividualWeight", "'"}], "[", "t", "]"}], 
+   RowBox[{"IndividualWeight", "[", "t", "]"}]], "/", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"LengthGrowth", "'"}], "[", "t", "]"}], 
+   RowBox[{"LengthGrowth", "[", "t", "]"}]]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->319791182],
+
+Cell[BoxData["PGb"], "Output",
+ ImageSize->{25, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->9014151]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "@", 
+  RowBox[{"LengthGrowth", "[", "t", "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->7104697],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"PGkk", " ", 
+       RowBox[{"(", 
+        RowBox[{"PGt0", "-", "t"}], ")"}]}]]}], ")"}]}], " ", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    FractionBox["PGW8", "PGd"], ")"}], 
+   FractionBox["1", "PGb"]]}]], "Output",
+ ImageSize->{192, 36},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->53731390]
+}, Open  ]],
+
+Cell["or by standard notation:", "ExampleText",
+ CellID->188784396],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"LengthGrowth", "[", "t", "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->234436021],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"\<\"k\"\>", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["\<\"t\"\>", "0"], "-", "t"}], ")"}]}]], "-", "1"}], 
+      ")"}]}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       SubscriptBox["\<\"W\"\>", "\[Infinity]"], "\<\"d\"\>"], ")"}], 
+     FractionBox["1", "\<\"b\"\>"]]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{125, 40},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->74685436]
+}, Open  ]],
+
+Cell[TextData[{
+ "WeightLengthRelation is not included in the length equation when using \
+longest length (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["L", "\[Infinity]"], TraditionalForm]]],
+ ") instead of highest weight (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["W", "\[Infinity]"], TraditionalForm]]],
+ ")"
+}], "ExampleText",
+ CellID->356534869],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LengthGrowth", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"UseWeight", "\[Rule]", "False"}]}], "]"}], "//", 
+  "SimplifyNotation"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->32703365],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    SubscriptBox["\<\"L\"\>", "\[Infinity]"], "-", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\<\"k\"\>", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["\<\"t\"\>", "0"], "-", "t"}], ")"}]}]], " ", 
+     SubscriptBox["\<\"L\"\>", "\[Infinity]"]}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{91, 17},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->100555981]
+}, Open  ]],
+
+Cell["\<\
+WeightLengthRelation is always included in the weight equation:\
+\>", "ExampleText",
+ CellID->8637600],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"IndividualWeight", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"UseWeight", "\[Rule]", "True"}]}], "]"}]}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->109727396],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\<\"k\"\>"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"t", "-", 
+           SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}], ")"}], "\<\"b\"\>"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{105, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]//TraditionalForm=",
+ CellID->67416729]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"IndividualWeight", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"UseWeight", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->96934328],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"d\"\>", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\<\"L\"\>", "\[Infinity]"], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\<\"k\"\>"}], " ", 
+           RowBox[{"(", 
+            RowBox[{"t", "-", 
+             SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}], ")"}]}], 
+      ")"}], "\<\"b\"\>"]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ ImageSize->{117, 19},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]//TraditionalForm=",
+ CellID->614555440]
+}, Open  ]],
+
+Cell["\<\
+Population biomass expressed by WeightLengthRelation and other biological \
+parameters\
+\>", "ExampleText",
+ CellID->540960771],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"PopulationGrowth", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"MortalityRate", "\[Rule]", "GrowthRate"}], ",", 
+    RowBox[{"BiomassIncluded", "\[Rule]", "All"}], ",", 
+    RowBox[{"Fishing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[8]:=",
+ CellID->79332059],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FractionBox[
+    RowBox[{"\<\"R\"\>", " ", 
+     SubscriptBox["\<\"W\"\>", "\[Infinity]"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"\<\"k\"\>", " ", 
+          SubscriptBox["\<\"t\"\>", "0"]}]], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "\[Infinity]"]}]], "-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "0"]}]]}], ")"}], 
+         RowBox[{"\<\"b\"\>", "+", "1"}]]}], "-", 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"\<\"k\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "0"]}]]}], ")"}], 
+         RowBox[{"\<\"b\"\>", "+", "1"}]], " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"\<\"k\"\>", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\<\"b\"\>", " ", 
+             SubscriptBox["\<\"t\"\>", "\[Infinity]"]}], "+", 
+            SubscriptBox["\<\"t\"\>", "\[Infinity]"], "+", 
+            SubscriptBox["\<\"t\"\>", "0"]}], ")"}]}]]}]}], ")"}], " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", "\<\"k\"\>"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\<\"b\"\>", " ", 
+          SubscriptBox["\<\"t\"\>", "\[Infinity]"]}], "-", 
+         SubscriptBox["\<\"t\"\>", "\<\"R\"\>"], "+", 
+         SubscriptBox["\<\"t\"\>", "\[Infinity]"], "+", 
+         RowBox[{"2", " ", 
+          SubscriptBox["\<\"t\"\>", "0"]}]}], ")"}]}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\<\"b\"\>", "+", "1"}], ")"}], " ", "\<\"k\"\>"}]],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{415, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[8]//TraditionalForm=",
+ CellID->535943220]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Neat Examples",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "@", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"IndividualWeight", "[", "\[IndentingNewLine]", 
+       RowBox[{"t", ",", "\[IndentingNewLine]", 
+        RowBox[{"InitialAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"WeightLengthRelation", "\[Rule]", "b"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"GrowthRate", "\[Rule]", ".35"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Recruits", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"MaxWeight", "\[Rule]", "10"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Fishing", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+       "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "15"}], "}"}]}], "\[IndentingNewLine]", 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"b", ",", "1", ",", "10", ",", ".5"}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->463504044],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+mg==
+    "], {{0, 123}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 123},
+  PlotRange->{{0, 180}, {0, 123}}]], "Output",
+ ImageSize->{184, 123},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->52311468]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["WeightLengthParameter",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/WeightLengthParameter"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["LengthGrowth",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/LengthGrowth"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->218794485],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["IndividualWeight",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/IndividualWeight"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->39344076]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"WeightLengthRelation - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 59, 6.5622041}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "WeightLengthRelation WeightLengthRelation gives the relation between the \
+length and volume of the fish species. Usually the value of \
+WeightLengthRelation is close to 3 (cubic relationship).", "synonyms" -> {}, 
+    "title" -> "WeightLengthRelation", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/WeightLengthRelation"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3859, 108, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->103021432]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 28204, 752}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[613, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[692, 24, 179, 5, 70, "LinkTrail"],
+Cell[874, 31, 2365, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3264, 88, 63, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3330, 91, 492, 12, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3859, 108, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->103021432],
+Cell[CellGroupData[{
+Cell[4345, 125, 147, 5, 70, "ExampleSection",
+ CellID->68024411],
+Cell[4495, 132, 134, 3, 70, "Input",
+ CellID->272567927],
+Cell[4632, 137, 234, 7, 70, "ExampleText",
+ CellID->365160919],
+Cell[CellGroupData[{
+Cell[4891, 148, 342, 11, 70, "Input",
+ CellID->319791182],
+Cell[5236, 161, 158, 5, 36, "Output",
+ CellID->9014151]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5431, 171, 140, 4, 70, "Input",
+ CellID->7104697],
+Cell[5574, 177, 499, 18, 57, "Output",
+ CellID->53731390]
+}, Open  ]],
+Cell[6088, 198, 67, 1, 70, "ExampleText",
+ CellID->188784396],
+Cell[CellGroupData[{
+Cell[6180, 203, 146, 4, 70, "Input",
+ CellID->234436021],
+Cell[6329, 209, 714, 24, 75, "Output",
+ CellID->74685436]
+}, Open  ]],
+Cell[7058, 236, 353, 12, 70, "ExampleText",
+ CellID->356534869],
+Cell[CellGroupData[{
+Cell[7436, 252, 216, 7, 70, "Input",
+ CellID->32703365],
+Cell[7655, 261, 555, 18, 38, "Output",
+ CellID->100555981]
+}, Open  ]],
+Cell[8225, 282, 112, 3, 70, "ExampleText",
+ CellID->8637600],
+Cell[CellGroupData[{
+Cell[8362, 289, 208, 6, 70, "Input",
+ CellID->109727396],
+Cell[8573, 297, 626, 20, 54, "Output",
+ CellID->67416729]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9236, 322, 208, 6, 70, "Input",
+ CellID->96934328],
+Cell[9447, 330, 764, 25, 54, "Output",
+ CellID->614555440]
+}, Open  ]],
+Cell[10226, 358, 137, 4, 70, "ExampleText",
+ CellID->540960771],
+Cell[CellGroupData[{
+Cell[10388, 366, 338, 8, 70, "Input",
+ CellID->79332059],
+Cell[10729, 376, 2124, 58, 74, "Output",
+ CellID->535943220]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12902, 440, 228, 7, 70, "ExampleSection",
+ CellID->589267740],
+Cell[CellGroupData[{
+Cell[13155, 451, 1115, 24, 70, "Input",
+ CellID->463504044],
+Cell[14273, 477, 11231, 192, 70, "Output",
+ CellID->52311468]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25565, 676, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[25985, 690, 235, 6, 70, "SeeAlso",
+ CellID->929782353],
+Cell[26223, 698, 221, 6, 70, "ExampleText",
+ CellID->218794485],
+Cell[26447, 706, 228, 6, 70, "ExampleText",
+ CellID->39344076]
+}, Open  ]],
+Cell[26690, 715, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

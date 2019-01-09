@@ -1,0 +1,369 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11089,        359]
+NotebookOptionsPosition[      8281,        270]
+NotebookOutlinePosition[      9929,        316]
+CellTagsIndexPosition[      9845,        311]
+WindowTitle->RichardsPellaTomlinsonParameter - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"GrowthModel\"\>":>
+       Documentation`HelpLookup["paclet:EconMult/ref/GrowthModel"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->
+         False], {"\<\"EconMult/ref/RichardsPellaTomlinsonParameter\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["EconMult/ref/RichardsPellaTomlinsonParameter"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/EconMult/ref/\
+RichardsPellaTomlinsonParameter.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "EconMult/ref/RichardsPellaTomlinsonParameter", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["RichardsPellaTomlinsonParameter", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData["RichardsPellaTomlinsonParameter"], "InlineFormula"],
+     "\[LineSeparator]RichardsPellaTomlinsonParameter is an option of \
+GrowthModel"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->918633903],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->53631878],
+
+Cell[TextData[{
+ "RichardsPellaTomlinsonParameter",
+ ButtonBox[" ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/RichardsPellaTomlinsonParameter"],
+ "is an option value for ",
+ Cell[BoxData[
+  ButtonBox["GrowthModel",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/GrowthModel"]], "InlineFormula"],
+ " when the value of ",
+ Cell[BoxData[
+  ButtonBox["PopulationModel",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/PopulationModel"]], "InlineFormula"],
+ " is set to ",
+ Cell[BoxData[
+  ButtonBox["SurplusProduction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/SurplusProduction"]], "InlineFormula"],
+ ". By default RichardsPellaTomlinsParameter is set to the generic ",
+ ButtonBox["PGm",
+  BaseStyle->"Link",
+  ButtonData->"paclet:EconMult/ref/PGm"]
+}], "ExampleText",
+ CellID->567933929],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"PopulationGrowth", "[", 
+   RowBox[{
+    RowBox[{"PopulationModel", "\[Rule]", "SurplusProduction"}], ",", 
+    RowBox[{"GrowthModel", "\[Rule]", "RichardsPellaTomlinson"}], ",", 
+    RowBox[{"UseMSY", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->506342236],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"r\"\>", " ", "\<\"X\"\>", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["\<\"X\"\>", "\<\"K\"\>"], ")"}], 
+       RowBox[{"\<\"m\"\>", "-", "1"}]]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{94, 34},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]//TraditionalForm=",
+ CellID->136493629]
+}, Open  ]],
+
+Cell["is equivalent with", "ExampleText",
+ CellID->23802219],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"SurplusProduction", "[", 
+   RowBox[{
+    RowBox[{"GrowthModel", "\[Rule]", "RichardsPellaTomlinson"}], ",", 
+    RowBox[{"UseMSY", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->81102391],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{"\<\"r\"\>", " ", "\<\"X\"\>", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["\<\"X\"\>", "\<\"K\"\>"], ")"}], 
+       RowBox[{"\<\"m\"\>", "-", "1"}]]}], ")"}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{94, 34},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->569321586]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["GrowthModel",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/GrowthModel"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["SurplusProduction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/SurplusProduction"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->239470440],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["RichardsPellaTomlinsonGrowth",
+   BaseStyle->"Link",
+   ButtonData->"paclet:EconMult/ref/RichardsPellaTomlinsonGrowth"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "ExampleText",
+ CellID->251786797]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RichardsPellaTomlinsonParameter - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 57, 41.6603480}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "RichardsPellaTomlinsonParameter RichardsPellaTomlinsonParameter is an \
+option of GrowthModel", "synonyms" -> {}, "title" -> 
+    "RichardsPellaTomlinsonParameter", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/RichardsPellaTomlinsonParameter"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3834, 110, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->918633903]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 9702, 304}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[624, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[703, 24, 179, 5, 70, "LinkTrail"],
+Cell[885, 31, 2425, 56, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3335, 91, 74, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3412, 94, 385, 11, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3834, 110, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->918633903],
+Cell[CellGroupData[{
+Cell[4320, 127, 147, 5, 70, "ExampleSection",
+ CellID->53631878],
+Cell[4470, 134, 837, 25, 70, "ExampleText",
+ CellID->567933929],
+Cell[CellGroupData[{
+Cell[5332, 163, 339, 8, 70, "Input",
+ CellID->506342236],
+Cell[5674, 173, 504, 16, 69, "Output",
+ CellID->136493629]
+}, Open  ]],
+Cell[6193, 192, 60, 1, 70, "ExampleText",
+ CellID->23802219],
+Cell[CellGroupData[{
+Cell[6278, 197, 268, 7, 70, "Input",
+ CellID->81102391],
+Cell[6549, 206, 504, 16, 69, "Output",
+ CellID->569321586]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7114, 229, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[7534, 243, 215, 6, 70, "SeeAlso",
+ CellID->929782353],
+Cell[7752, 251, 231, 6, 70, "ExampleText",
+ CellID->239470440],
+Cell[7986, 259, 253, 6, 70, "ExampleText",
+ CellID->251786797]
+}, Open  ]],
+Cell[8254, 268, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

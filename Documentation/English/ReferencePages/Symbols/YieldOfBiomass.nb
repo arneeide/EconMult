@@ -1,0 +1,585 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     22081,        575]
+NotebookOptionsPosition[     19029,        476]
+NotebookOutlinePosition[     20652,        522]
+CellTagsIndexPosition[     20567,        517]
+WindowTitle->YieldOfBiomass - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"EconMult/ref/YieldOfBiomass\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/YieldOfBiomass"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+YieldOfBiomass.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/YieldOfBiomass", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["YieldOfBiomass", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"YieldOfBiomass", "[", "X", "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives the total equilibrium catch as a function of \
+population biomass X and age of first catch ",
+     Cell[BoxData[
+      SubscriptBox["t", "c"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->37984209],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->26900711],
+
+Cell["\<\
+YieldOfBiomass is fully based on FishingMortalityEquilibrium.\
+\>", "ExampleText",
+ CellID->231984364],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->308268552],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"YieldOfBiomass", "[", 
+  RowBox[{"2000", ",", 
+   RowBox[{"CatchAge", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+   RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+   RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", 
+   RowBox[{"GrowthRate", "\[Rule]", ".35"}], ",", 
+   RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", 
+   RowBox[{"Recruits", "\[Rule]", "1000"}], ",", 
+   RowBox[{"RecruitmentAge", "\[Rule]", "0"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->313671045],
+
+Cell[BoxData["8.920336392477793`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->586912095]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"opt", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"CatchAge", "\[Rule]", "2"}], ",", 
+     RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+     RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+     RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", 
+     RowBox[{"GrowthRate", "\[Rule]", ".35"}], ",", 
+     RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", 
+     RowBox[{"Recruits", "\[Rule]", "1000"}], ",", 
+     RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", 
+     RowBox[{"FishingMortalityRate", "\[Rule]", "0"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->376149055],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"YieldOfBiomass", "[", 
+    RowBox[{"x", ",", 
+     RowBox[{"Sequence", "@@", "opt"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"EquilibriumBiomass", "[", 
+      RowBox[{"Sequence", "@@", "opt"}], "]"}]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->195711641],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+TnOJViwcIyGEEDLI/waIcFw=
+    "], {{0, 110}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 110},
+  PlotRange->{{0, 180}, {0, 110}}]], "Output",
+ ImageSize->{184, 110},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->117438701]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Neat Examples",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740],
+
+Cell["\<\
+The yield plots of varying selection values (age of first catch) represented \
+as surplus production curves.\
+\>", "ExampleText",
+ CellID->417251697],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"opt", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"OldestAge", "\[Rule]", "Infinity"}], ",", 
+     RowBox[{"InitialAge", "\[Rule]", "0"}], ",", 
+     RowBox[{"WeightLengthRelation", "\[Rule]", "3"}], ",", 
+     RowBox[{"MortalityRate", "\[Rule]", ".2"}], ",", 
+     RowBox[{"GrowthRate", "\[Rule]", ".35"}], ",", 
+     RowBox[{"MaxWeight", "\[Rule]", "1"}], ",", 
+     RowBox[{"Recruits", "\[Rule]", "1000"}], ",", 
+     RowBox[{"RecruitmentAge", "\[Rule]", "0"}], ",", 
+     RowBox[{"FishingMortalityRate", "\[Rule]", "0"}], ",", 
+     RowBox[{"BiomassIncluded", "\[Rule]", "AllParts"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->815013858],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Klist", "=", 
+   RowBox[{"PopulationGrowth", "[", 
+    RowBox[{"Sequence", "@@", "opt"}], "]"}]}], ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->333155309],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"yieldplot", "[", "tc0_", "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"Abs", "@", 
+     RowBox[{"YieldOfBiomass", "[", 
+      RowBox[{
+       RowBox[{"x", "-", 
+        RowBox[{"Evaluate", "[", 
+         RowBox[{
+          RowBox[{"Klist", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{"PGtc", "\[Rule]", "tc0"}], "}"}]}], "]"}]}], ",", 
+       RowBox[{"CatchAge", "\[Rule]", "tc0"}], ",", 
+       RowBox[{"Sequence", "@@", "opt"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"Evaluate", "[", 
+       RowBox[{
+        RowBox[{"Klist", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "/.", 
+        RowBox[{"{", 
+         RowBox[{"PGtc", "\[Rule]", "tc0"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Evaluate", "[", 
+       RowBox[{"Apply", "[", 
+        RowBox[{"Plus", ",", 
+         RowBox[{"Klist", "/.", 
+          RowBox[{"{", 
+           RowBox[{"PGtc", "\[Rule]", "tc0"}], "}"}]}]}], "]"}], "]"}]}], 
+     "}"}]}], "]"}]}]], "InputOnly",
+ CellLabel->"In[54]:=",
+ CellID->99227324],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"yieldplot", "[", "i", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", "10"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->11477021],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 115}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 115},
+  PlotRange->{{0, 180}, {0, 115}}]], "Output",
+ ImageSize->{184, 115},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->218389086]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"YieldOfBiomass - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 59, 14.8576785}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "YieldOfBiomass[X] gives the total equilibrium catch as a function of \
+population biomass X and age of first catch t_c.", "synonyms" -> {}, "title" -> 
+    "YieldOfBiomass", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/YieldOfBiomass"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3387, 100, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->37984209]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 20425, 510}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[607, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[686, 24, 179, 5, 70, "LinkTrail"],
+Cell[868, 31, 1882, 42, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2775, 77, 57, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2835, 80, 515, 15, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3387, 100, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->37984209],
+Cell[CellGroupData[{
+Cell[3872, 117, 147, 5, 70, "ExampleSection",
+ CellID->26900711],
+Cell[4022, 124, 112, 3, 70, "ExampleText",
+ CellID->231984364],
+Cell[4137, 129, 155, 5, 70, "Input",
+ CellID->308268552],
+Cell[CellGroupData[{
+Cell[4317, 138, 559, 12, 70, "Input",
+ CellID->313671045],
+Cell[4879, 152, 175, 5, 36, "Output",
+ CellID->586912095]
+}, Open  ]],
+Cell[5069, 160, 631, 16, 70, "Input",
+ CellID->376149055],
+Cell[CellGroupData[{
+Cell[5725, 180, 370, 11, 28, "Input",
+ CellID->195711641],
+Cell[6098, 193, 2834, 54, 131, "Output",
+ CellID->117438701]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8981, 253, 228, 7, 70, "ExampleSection",
+ CellID->589267740],
+Cell[9212, 262, 159, 4, 70, "ExampleText",
+ CellID->417251697],
+Cell[9374, 268, 702, 17, 70, "Input",
+ CellID->815013858],
+Cell[10079, 287, 193, 6, 70, "Input",
+ CellID->333155309],
+Cell[10275, 295, 1139, 33, 70, "InputOnly",
+ CellID->99227324],
+Cell[CellGroupData[{
+Cell[11439, 332, 328, 10, 70, "Input",
+ CellID->11477021],
+Cell[11770, 344, 7193, 125, 70, "Output",
+ CellID->218389086]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[19002, 474, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

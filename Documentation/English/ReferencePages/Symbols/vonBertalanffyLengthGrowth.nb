@@ -1,0 +1,443 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12667,        433]
+NotebookOptionsPosition[      9342,        325]
+NotebookOutlinePosition[     10980,        371]
+CellTagsIndexPosition[     10895,        366]
+WindowTitle->vonBertalanffyLengthGrowth - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["EconMult",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:EconMult/guide/EconMult"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["ECONMULT PACLET SYMBOL", "PacletNameCell"], Cell[TextData[Cell[
+    BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->
+        False], {"\<\"EconMult/ref/vonBertalanffyLengthGrowth\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["EconMult/ref/vonBertalanffyLengthGrowth"]}, Visible -> 
+           False]]; SelectionMove[
+        DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/EconMult/ref/\
+vonBertalanffyLengthGrowth.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "EconMult/ref/vonBertalanffyLengthGrowth", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["vonBertalanffyLengthGrowth", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"vonBertalanffyLengthGrowth", "[", "t", "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives the differential equation of length as a \
+function of age (t)."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->713551570],
+
+Cell["\<\
+The von Bertalanffy growth equation may have the following parameters:\
+\>", "Notes",
+ CellID->1067943069],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["GrowthRate",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:EconMult/ref/GrowthRate"]], "InlineFormula"]], "ExampleText",
+ CellID->632392110],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["WeightLengthParameter",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:EconMult/ref/WeightLengthParameter"]], "InlineFormula"]], \
+"ExampleText",
+ CellID->226950576],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["WeightLengthRelation",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:EconMult/ref/WeightLengthRelation"]], "InlineFormula"]], \
+"ExampleText",
+ CellID->976750011],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["MaxLength",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:EconMult/ref/MaxLength"]], "InlineFormula"]], "ExampleText",
+ CellID->124119535],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["MaxWeight",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:EconMult/ref/MaxWeight"]], "InlineFormula"]], "ExampleText",
+ CellID->704977476]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->9598089],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->196731542],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<EconMult`PopulationGrowth`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->285142108],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"vonBertalanffyLengthGrowth", "[", "t", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->400298425],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["vonBertalanffyLength", "\[Prime]",
+    MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+  RowBox[{"PGkk", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["PGW8", "PGd"], ")"}], 
+      FractionBox["1", "PGb"]], "-", 
+     RowBox[{"vonBertalanffyLength", "[", "t", "]"}]}], ")"}]}]}]], "Output",
+ ImageSize->{471, 40},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->270234372]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"vonBertalanffyLengthGrowth", "[", "t", "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->191524136],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\<\"L\"\>", "\[Prime]",
+      MultilineFunction->None], "(", "t", ")"}], "\[LongEqual]", 
+    RowBox[{"\<\"k\"\>", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          SubscriptBox["\<\"W\"\>", "\[Infinity]"], "\<\"d\"\>"], ")"}], 
+        FractionBox["1", "\<\"b\"\>"]], "-", 
+       RowBox[{"\<\"L\"\>", "[", "t", "]"}]}], ")"}]}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{137, 45},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->272642005]
+}, Open  ]],
+
+Cell["\<\
+Normally the von Bertalanffy differential equation is given on this form:\
+\>", "ExampleText",
+ CellID->677601423],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Notation", "@", 
+  RowBox[{"vonBertalanffyLengthGrowth", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"UseWeight", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->26800641],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\<\"L\"\>", "\[Prime]",
+      MultilineFunction->None], "(", "t", ")"}], "\[LongEqual]", 
+    RowBox[{"\<\"k\"\>", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\<\"L\"\>", "\[Infinity]"], "-", 
+       RowBox[{"\<\"L\"\>", "[", "t", "]"}]}], ")"}]}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{108, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->778396657]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SimplifyNotation", "@", 
+  RowBox[{"vonBertalanffyLengthGrowth", "[", 
+   RowBox[{"t", ",", 
+    RowBox[{"UseWeight", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->93309486],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   RowBox[{
+    RowBox[{"\<\"k\"\>", " ", 
+     SubscriptBox["\<\"L\"\>", "\[Infinity]"]}], "\[LongEqual]", 
+    RowBox[{
+     RowBox[{"\<\"k\"\>", " ", 
+      RowBox[{"\<\"L\"\>", "[", "t", "]"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["\<\"L\"\>", "\[Prime]",
+       MultilineFunction->None], "(", "t", ")"}]}]}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ ImageSize->{109, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]//TraditionalForm=",
+ CellID->376179006]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"vonBertalanffyLengthGrowth - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2011, 4, 7, 10, 58, 58.0307161}", "context" -> "EconMult`", 
+    "keywords" -> {}, "index" -> True, "label" -> "EconMult Paclet Symbol", 
+    "language" -> "en", "paclet" -> "EconMult", "status" -> "None", "summary" -> 
+    "vonBertalanffyLengthGrowth[t] gives the differential equation of length \
+as a function of age (t).", "synonyms" -> {}, "title" -> 
+    "vonBertalanffyLengthGrowth", "type" -> "Symbol", "uri" -> 
+    "EconMult/ref/vonBertalanffyLengthGrowth"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5085, 163, 459, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->9598089]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 10754, 359}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[619, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[698, 24, 179, 5, 70, "LinkTrail"],
+Cell[880, 31, 1952, 44, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2857, 79, 69, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2929, 82, 421, 12, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3387, 99, 580, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->713551570],
+Cell[3970, 118, 116, 3, 70, "Notes",
+ CellID->1067943069],
+Cell[4089, 123, 181, 5, 70, "ExampleText",
+ CellID->632392110],
+Cell[4273, 130, 205, 6, 70, "ExampleText",
+ CellID->226950576],
+Cell[4481, 138, 203, 6, 70, "ExampleText",
+ CellID->976750011],
+Cell[4687, 146, 179, 5, 70, "ExampleText",
+ CellID->124119535],
+Cell[4869, 153, 179, 5, 70, "ExampleText",
+ CellID->704977476]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5085, 163, 459, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->9598089],
+Cell[CellGroupData[{
+Cell[5569, 180, 148, 5, 70, "ExampleSection",
+ CellID->196731542],
+Cell[5720, 187, 155, 5, 70, "Input",
+ CellID->285142108],
+Cell[CellGroupData[{
+Cell[5900, 196, 122, 3, 70, "Input",
+ CellID->400298425],
+Cell[6025, 201, 533, 17, 61, "Output",
+ CellID->270234372]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6595, 223, 152, 4, 70, "Input",
+ CellID->191524136],
+Cell[6750, 229, 711, 22, 80, "Output",
+ CellID->272642005]
+}, Open  ]],
+Cell[7476, 254, 124, 3, 70, "ExampleText",
+ CellID->677601423],
+Cell[CellGroupData[{
+Cell[7625, 261, 218, 6, 70, "Input",
+ CellID->26800641],
+Cell[7846, 269, 579, 18, 50, "Output",
+ CellID->778396657]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8462, 292, 226, 6, 70, "Input",
+ CellID->93309486],
+Cell[8691, 300, 585, 18, 50, "Output",
+ CellID->376179006]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[9315, 323, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
