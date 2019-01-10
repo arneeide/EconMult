@@ -1,6 +1,6 @@
 # EconMult
 A combined fleet model (EconMult) and collection of population growth models (PopulationGrowth).
-Both are EconMult and PopulationGrowth are Mathematica packages and should be loaded within Mathematica by 
+Both EconMult and PopulationGrowth are Mathematica packages and should be loaded within Mathematica by 
 
 ## Installation
 Load the Econmult\` package into a Mathematica notebook:
