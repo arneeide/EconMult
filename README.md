@@ -3,7 +3,7 @@ A combined fleet model (EconMult) and collection of population growth models (Po
 Both are EconMult and PopulationGrowth are Mathematica packages and should be loaded within Mathematica by 
 
 ## Installation
-Load the Econmult` package embedded in the file "Chess.wl" into a Mathematica notebook.
+Load the Econmult` package into a Mathematica notebook:
 
  Needs["Econmult`"]
 
