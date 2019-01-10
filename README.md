@@ -3,6 +3,9 @@ A combined fleet model (EconMult) and collection of population growth models (Po
 Both EconMult and PopulationGrowth are Mathematica packages and should be loaded in Mathematica. 
 
 ## Installation
+Install the files here as an application by selecting "Install..." from the file-menu in Mathematica.
+
+## Usage
 Load the Econmult\` package into a Mathematica notebook:
 
  Needs["EconMult\`"]
