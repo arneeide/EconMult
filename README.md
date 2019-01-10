@@ -5,15 +5,11 @@ Both are EconMult and PopulationGrowth are Mathematica packages and should be lo
 ## Installation
 Load the Econmult\` package into a Mathematica notebook:
 
- `Needs["EconMult\`"]
+ Needs["EconMult\`"]
  
 or load one of the two packages directly by 
 
-`Needs["EconMult\`EconMult\`"]
-
-or 
-
-Needs["EconMult\`PopulationGrowth\`"]
+ Needs["EconMult\`EconMult\`"]    or   Needs["EconMult\`PopulationGrowth\`"]
 
 ## EconMult
 A multi-fleet, multi-species fisheries economic model. 
