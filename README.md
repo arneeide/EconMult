@@ -10,8 +10,16 @@ Install the files here as an application by selecting "Install..." from the file
 ## Usage
 Load the Econmult\` package into a Mathematica notebook:
 
- Needs["EconMult\`"]
- 
+```mathematica
+ Needs["EconMult`"]
+```
+
 or load one of the two packages directly by 
 
- Needs["EconMult\`EconMult\`"]    or   Needs["EconMult\`PopulationGrowth\`"]
+```mathematica
+Needs["EconMult\`EconMult\`"]    
+```
+or   
+```mathematica
+Needs["EconMult\`PopulationGrowth\`"]
+```
