@@ -17,9 +17,9 @@ Load the Econmult\` package into a Mathematica notebook:
 or load one of the two packages directly by 
 
 ```mathematica
-Needs["EconMult\`EconMult\`"]    
+Needs["EconMult`EconMult`"]    
 ```
 or   
 ```mathematica
-Needs["EconMult\`PopulationGrowth\`"]
+Needs["EconMult`PopulationGrowth`"]
 ```
